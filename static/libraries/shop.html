@@ -1,0 +1,135 @@
+<script Configuration>
+    modulo.register('templateFilter', function hlinperson (text) {
+        return text
+            .replace(/(in.person)/gi, '<span class="text--hlinperson">$1</span>')
+            .replace(/(on.site)/gi, '<span class="text--hlinperson">$1</span>');
+    });
+
+</script>
+
+<Component name="Courses">
+    <Props
+        show
+    ></Props>
+    <Template>
+        {% for plan in script.plans %}
+            {#class="{% if 'bootcamp' in plan.title|lower %}bootcamp{% endif %}"#}
+            <article
+                title="{{ plan.title }}"
+                class=" {% if plan.inquire %} bootcamp {% endif %} "
+            >
+                <div class="
+                    h3-wrapper
+                    {% if plan.inquire %}
+                    h3-wrapper--inquire
+                    {% endif %}
+                ">
+                    <h3>{{ plan.title }}</h3>
+                </div>
+                {% if plan.mostPopular %}
+                    <p class="most-popular"><strong>Most popular</strong></p>
+                {% endif %}
+                <p class="online">({{ plan.online|lower|hlinperson|safe }})</p>
+                <p class="lectures">
+                    {{ plan.lectures|hlinperson|safe }} Lectures
+                </p>
+                <p class="summary">{{ plan.summary }}</p>
+                {% if plan.crossedPrice %}
+                    <p class="prices">
+                        <span class="crossed-price">
+                            {{ plan.crossedPrice }}
+                        </span>
+                    </p>
+                {% else %}
+                    <p class="stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733;<br />
+                        <span>Five-star rated program*</span>
+                    </p>
+                {% endif %}
+
+                <p class="prices">
+                    <span class="big-price">{{ plan.price }}</span>
+                </p>
+                <p class="length">
+                    {{ plan.length }}
+                </p>
+                {% if plan.price lt 900 %}
+                    <a class="buy-btn" href="#">Purchase</a>
+                {% elif plan.inquire %}
+                    <a class="buy-btn buy--inquire" href="#">Inquire*</a>
+                {% else %}
+                    <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+                {% endif %}
+                {% if plan.inquire %}
+                    <p class="inquire">* {{ plan.inquire }}</p>
+                {% endif %}
+            </article>
+        {% endfor %}
+        <div style="grid-column: span 4; font-size: 0.8rem;">
+            <p>* We are proud to have earned 5/5 for our commitment to
+            excellence in affordable coding education. Review sites:
+            <a href="https://www.coursereport.com/schools/kickstart-coding" target="_blank">Course Report</a>,
+            <a href="https://www.switchup.org/bootcamps/kickstart-coding" target="_blank">Switch Up</a>,
+            and <a href="https://www.switchup.org/bootcamps/kickstart-coding" target="_blank">Yelp</a>.
+        </div>
+    </Template>
+    <Style -src="/static/libraries/shop/Courses.css"></Style>
+    <Script>
+        const plans = [
+            {
+                title: 'Group Tutoring',
+                online: 'Online only',
+                lectures: 'Prerecorded',
+                price: 149,
+                length: '2 months',
+                summary: `For only $149, unlock lifetime access to entire video
+                curriculum for self-paced work, in addition to 2 months of Q&A
+                help during weekly group review sessions.`,
+            },
+            {
+                title: 'Private Tutoring',
+                online: 'Online only',
+                lectures: 'Prerecorded',
+                price: 499,
+                length: '2 months',
+                summary: `Level up your skills by purchasing a 1:1 tutoring
+                program, affordably priced to renew every 2 months. Includes
+                video curriculum and all group tutoring options as well.`,
+            },
+            {
+                title: 'Hybrid Bootcamp',
+                mostPopular: true,
+                online: 'In-person and/or online',
+                lectures: 'Prerecorded',
+                price: 2499,
+                length: '9 months',
+                summary: `We take a coding beginner to job-ready status in 9
+                months. The price includes 6 months of 1:1 tutoring, 9 months
+                of group work sessions, and job-hunt coaching to kickstart your
+                career in tech.`,
+            },
+            {
+                title: 'Oakland Bootcamp',
+                online: 'In-person only',
+                lectures: 'Live, On-Site',
+                crossedPrice: '$10,992',
+                price: 8499,
+                length: '9 month bundle',
+                inquire: `Note: Next cohort only will begin after Q1 2024`,
+                summary: `Join us in Oakland for our live, on-site full stack
+                coding bootcamp. Bundle consists of five courses, and 1:1
+                tutoring plan.`,
+            },
+        ];
+        function prepareCallback() {
+            const items = plans; // props.show === 'plans' ? plans : courses;
+            return { plans };
+        }
+    </Script>
+
+</Component>
+
+
+
+
+

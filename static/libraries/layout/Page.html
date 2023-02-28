@@ -1,0 +1,47 @@
+<head>
+    <title>{{ props.title }}</title>
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="/static/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <a name="nav"></a>
+    <nav class="Page-nav">
+        <img src="/static/images/kickstartcodinglogo.svg" />
+        <ul>
+            {% for page in script.navigation %}
+                <li>
+                    <a href="{% if page.file == props.navselected %}#c{% else %}/{{ page.file }}#c{% endif %}"
+                        title="{{ page.title }}"
+                        class="
+                            Page-navLink
+                            {% if page.file == props.navselected %}Page-navLink--selected{% endif %}
+                        ">
+                        {{ page.title|upper }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="right-links">
+            <a href="https://kickstartcoding.online/">Student Portal &raquo;</a>
+        </div>
+    </nav>
+
+    <div class="Page-navHBMenu">
+        <a href="#nav" class="btn-hbmenu">☰</a>
+    </div>
+
+    <a name="c"></a> <!-- c = content -->
+    <div class="Page-container">
+        <main class="Page-mainContent">
+            <slot></slot>
+        </main>
+    </div>
+
+    <footer class="Page-footer">
+        &copy; {{ script.currentYear }} | All Rights Reserved by Page Author
+        <!-- Feel free to delete this: -->
+        | <a href="https://modulojs.org/" title="Made with Modulo.js" target="_blank">%</a>
+    </footer>
+</body>

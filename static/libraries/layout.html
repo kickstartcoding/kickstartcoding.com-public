@@ -1,0 +1,90 @@
+<Component name="Page" mode="vanish-into-document">
+    <Props
+        title
+        navselected
+    ></Props>
+
+    <Template
+        -src="/static/libraries/layout/Page.html"
+    ></Template>
+
+    <Style
+        -src="/static/libraries/layout/Page.css"
+    ></Style>
+
+    <Script>
+        function prepareCallback() {
+            // For now, store the navigation array and generate year in JS
+            return {
+                currentYear: (new Date()).getFullYear(),
+                navigation: [
+                    {
+                        title: "Start",
+                        file: "index.html",
+                    },
+                    {
+                        title: "Courses",
+                        file: "courses.html",
+                    },
+                    {
+                        title: "Community",
+                        file: "community.html",
+                    },
+                    {
+                        title: "Results",
+                        file: "results.html",
+                    },
+                ],
+            };
+        }
+    </Script>
+
+</Component>
+
+<Component name="CourseList">
+    <Props
+        listname
+    ></Props>
+
+    <Template
+        -src="/static/libraries/layout/CourseList.html"
+    ></Template>
+    <Script>
+        const courses = [
+            {
+                title: 'Foundations',
+                image: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                isFree: true,
+            },
+            {
+                title: 'Prework',
+                image: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            },
+            {
+                title: 'Fundamentals',
+                image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            },
+            {
+                title: 'Backend',
+                image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80',
+            },
+            {
+                title: 'Frontend',
+                image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+            },
+            {
+                title: 'Career',
+                image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            },
+            {
+                title: 'Capstone',
+                image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+            },
+        ];
+        function initializedCallback() {
+            return { courses };
+        }
+    </Script>
+</Component>
+
+
