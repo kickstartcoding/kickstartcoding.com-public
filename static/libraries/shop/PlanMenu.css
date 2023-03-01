@@ -1,8 +1,9 @@
 :host {
     display: grid;
-    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
+    width: 900px;
+    max-width: 100vw;
 }
 
 p.most-popular {

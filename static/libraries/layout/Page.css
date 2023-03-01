@@ -32,23 +32,28 @@ body {
     margin: 0;
 }
 
-.Page-container {
+.layout-container {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 900px) 1fr;
-    min-height: calc(100vh - 200px);
-    padding-top: 80px;
-    width: calc(100vw -  20px);
 }
 
-.Page-mainContent {
-    background: white;
+.layout-container > * {
     grid-column: 2;
 }
 
-.Page-mainContent h1 {
+.Page-container {
+    min-height: calc(100vh - 200px);
+    padding-top: 80px;
+    max-width: calc(100vw);
+    overflow: hidden;
+    background: white;
+}
+
+
+.Page-container h1 {
     border-bottom: 1px solid black;
 }
-.Page-mainContent code {
+.Page-container code {
     border-bottom: 1px dashed gray;
 }
 
@@ -57,9 +62,11 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 900px) 1fr;
     width: 100vw;
-    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     box-shadow: 0 5px 5px #00000033;
     background: whiteSmoke;
+    /*border-top: 2px solid var(--golden);*/
     border-top: 2px solid var(--cerulean);
     z-index: 5;
 }
@@ -74,6 +81,8 @@ body {
     background: white;
     display: inline-block;
     font-size: 30px;
+    text-decoration: none;
+    color: black !important;
 }
 
 .Page-nav img {
@@ -118,26 +127,38 @@ body {
 
 .Page-navLink {
     color: black;
-    font-weight: 200;
-    font-size: 32px;
+    font-weight: 400;
+    font-size: 1.8rem;
     /*border-bottom: 1px solid black;*/
-    border-bottom: 1px solid var(--sunshine);
+    border-bottom: 2px solid var(--cerulean);
     display: block;
     text-decoration: none;
     min-width: 220px;
     margin-left: 0;
     text-align: center;
+    transition: box-shadow 0.17s;
+    box-shadow: 
+        0 -100px 5px 100px inset #ffffff11,
+        0  100px 5px 100px inset #ffffff11;
+}
+.Page-navLink:hover {
+    box-shadow: 
+        0 -5px 0 0 inset var(--bluebird),
+        0 5px 0 0 inset var(--bluebird);
 }
 
 .Page-navLink--selected {
-    background-color: var(--cerulean);
+    background-color: var(--bluebird);
+    box-shadow: 0 -5px 10px 0 inset #00000014;
+    border-radius: 1px;
+    /*color: white;*/
+    /*background-color: var(--cerulean);*/
     /*background: linear-gradient(to bottom, var(--cerulean), var(--cerulean) 80%, var(--bluebird) 81%);*/
-    border-color: var(--sunshine);
-    color: white;
+    /*border-color: var(--sunshine);*/
 }
 
 .Page-navLink:hover {
-    border-color: var(--sunshine);
+    /*border-color: var(--sunshine);*/
 }
 
 .Page-navLink--selected {
@@ -167,17 +188,20 @@ body {
 }
 
 .hero-inset {
-    width: 100vw;
-    position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-    left: calc((-100vw + 900px) / 2.0);
+    grid-column: 1 / span 3;
     background: var(--sunshine);
     z-index: 1;
-    background-size: cover;
+    /*width: 100vw;*/
+    /*position: relative;*/
+    /*left: calc((-100vw + 900px) / 2.0);*/
+    /*background-size: cover;*/
     box-shadow: 0 10px 10px inset #00000033;
+    /*
     display: grid;
     grid-template-columns: 1fr minmax(auto, 900px) 1fr;
+    */
 }
 
 .hero-inset > * {
@@ -237,20 +261,50 @@ body {
     padding: 3px;
 }
 
+.Page-container .hero-image-left {
+    height: 400px;
+    margin-top: -280px;
+    margin-bottom: -47px;
+    z-index: 1;
+}
+
+.Page-container .hero-text-top,
+.Page-container .hero-text-bottom {
+    padding-top: 65px;
+    margin: 0;
+    margin-top: 35px;
+    border-bottom: 3px solid var(--bluebird);
+    text-align: right;
+    font-size: 4rem; 
+    width: 100vw;
+    grid-column: 1 / span 3;
+}
+
+
+.Page-container .hero-text-bottom {
+    border: none !important;
+    font-weight: 200;
+    font-size: 3rem; 
+    padding: 0;
+    margin: 0;
+}
+
+
 @media (max-width: 1440px) {
     .Page-nav {
-        /* Don't do "Margin aligned" layout for <FHD displays */
-        /*display: flex;*/
+        /* Don't be as tall layout for <FHD displays */
+        height: 50px;
     }
 
     .Page-nav img { /* Move 10px left */
         margin-left: -10px;
         margin-right: 10px;
         width: 210px;
+        margin-top: -8px; /* move up */
     }
 
     .Page-navLink {
-        font-size: 22px;
+        font-size: 1.5rem;
         min-width: 170px;
     }
 
@@ -262,6 +316,9 @@ body {
 }
 
 @media (max-width: 992px) {
+    .Page-container .hero-image-left {
+        z-index: 0;
+    }
     .Page-nav img {
         width: 100%;
     }
@@ -270,32 +327,37 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
+    .layout-container {
+        grid-template-columns: 5px 1fr 5px;
+    }
+
     .Page-navHBMenu {
         display: block;
         position: fixed;
         top: 1px;
         left: 1px;
-        z-index: 1;
+        z-index: 5;
     }
 
     .Page-nav {
+        height: auto;
         display: block;
         position: relative;
-        width: calc(100vw -  30px);
+        /*width: calc(100vw -  30px);*/
         /*min-height: calc(100vh -  30px);*/
         margin-right: 20px;
         margin-bottom: 20px;
-        z-index: 2;
+        z-index: 6;
     }
 }
 
 
 @media (max-width: 576px) {
-    .Page-container {
-        grid-template-columns: 10px auto 10px;
+    .Page-container .hero-image-left {
+        height: 200px;
+        z-index: 0;
     }
-
-    .Page-navLink {
-        font-size: 20px;
+    .layout-container {
+        display: block; /* Ensure all layouts go to static at this point */
     }
 }

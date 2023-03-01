@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html><head>
 
 
-<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-x1hp3f9u.css" /></head><body>
+<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-x1p6ijud.css" /></head><body>
     
     
     
@@ -10,8 +10,8 @@
 
 
     <a name="nav"></a>
-    <nav class="Page-nav">
-        <img src="/static/images/kickstartcodinglogo.svg">
+    <nav class="Page-nav layout-container">
+        <img src="/static/images/kickstartcodinglogo.svg" style="grid-column: 1">
         <ul>
             
                 <li>
@@ -51,7 +51,7 @@
                 </li>
             
         </ul>
-        <div class="right-links">
+        <div class="right-links" style="grid-column: 3">
             <a href="https://kickstartcoding.online/">Student Portal »</a>
         </div>
     </nav>
@@ -61,9 +61,7 @@
     </div>
 
     <a name="c"></a> <!-- c = content -->
-    <div class="Page-container">
-        <main class="Page-mainContent">
-            <slot>
+    <slot class="Page-container layout-container">
 
 
 <div style="font-size: 2rem; text-align: right;  letter-spacing: -0.025em;">
@@ -739,8 +737,6 @@ course curriculum.</strong></p>
 
 
 </slot>
-        </main>
-    </div>
 
     <footer class="Page-footer">
         © 2023 | All Rights Reserved by Page Author
@@ -748,7 +744,7 @@ course curriculum.</strong></p>
         | <a href="https://modulojs.org/" title="Made with Modulo.js" target="_blank">%</a>
     </footer>
 
-<script src="/_modulo/modulo-build-xxr07vit.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
+<script src="/_modulo/modulo-build-xxagfokc.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
 modulo.assets.require("library1_configuration");
 modulo.assets.require("library_Page");
 modulo.assets.require("library_CourseList");

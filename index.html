@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html><head>
 
 
-<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-x1hp3f9u.css" /></head><body>
+<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-x1p6ijud.css" /></head><body>
     
     
     
@@ -10,8 +10,8 @@
 
 
     <a name="nav"></a>
-    <nav class="Page-nav">
-        <img src="/static/images/kickstartcodinglogo.svg">
+    <nav class="Page-nav layout-container">
+        <img src="/static/images/kickstartcodinglogo.svg" style="grid-column: 1">
         <ul>
             
                 <li>
@@ -51,7 +51,7 @@
                 </li>
             
         </ul>
-        <div class="right-links">
+        <div class="right-links" style="grid-column: 3">
             <a href="https://kickstartcoding.online/">Student Portal »</a>
         </div>
     </nav>
@@ -61,19 +61,25 @@
     </div>
 
     <a name="c"></a> <!-- c = content -->
-    <div class="Page-container">
-        <main class="Page-mainContent">
-            <slot>
+    <slot class="Page-container layout-container">
 
-<div style="height: 350px; font-size: 2rem; text-align: right;  letter-spacing: -0.025em;">
-    <img style="height: 400px; float: left;" src="/static/images/characters_version_2_altered.png">
-    <h1 style="padding-top: 100px; margin: 0; border-bottom: 3px solid var(--bluebird);">Learn to code</h1>
-    <h2 style="margin: 0; font-weight: 200">
-        with our one-on-one<br>
-        bootcamp program
-    </h2>
+
+<h1 class="hero-text-top layout-container">
+    <div>Learn to code</div>
+</h1>
+
+<h1 class="hero-text-bottom layout-container">
+    <div>with our one-on-one<br>
+    bootcamp program</div>
+</h1>
+
+<img class="hero-image-left" src="/static/images/characters_version_2_altered.png">
+<!--
+<div style="height: 350px; text-align: right;  letter-spacing: -0.025em; display: relative; z-index: 1;">
 </div>
+-->
 
+<div style="margin-top: 37px"></div>
 
 <x-planmenu modulo-original-html="">
 
@@ -239,9 +245,9 @@
 
 </x-planmenu>
 
-<div style="margin-top: 80px"></div>
+<div style="margin-top: 60px"></div>
 
-<div class="hero-inset">
+<div class="hero-inset layout-container">
     <h1 style="font-size: 3.2rem; font-weight: 800">» The <em style="font-weight: 600">flexible</em> route to job-ready</h1>
     <div class="hero-image" style="border: none;">
         <p style="font-size: 2rem; width: 70%; margin-top: 200px; margin-left: 5%; line-height: 2.6rem">
@@ -353,8 +359,6 @@
     <a href="results.html">Read more testimonials and browse student projects on our Results page »</a>
 
 </slot>
-        </main>
-    </div>
 
     <footer class="Page-footer">
         © 2023 | All Rights Reserved by Page Author
@@ -362,7 +366,7 @@
         | <a href="https://modulojs.org/" title="Made with Modulo.js" target="_blank">%</a>
     </footer>
 
-<script src="/_modulo/modulo-build-xxr07vit.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
+<script src="/_modulo/modulo-build-xxagfokc.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
 modulo.assets.require("library1_configuration");
 modulo.assets.require("library_Page");
 modulo.assets.require("library_CourseList");

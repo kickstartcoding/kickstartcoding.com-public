@@ -7,8 +7,8 @@
 </head>
 <body>
     <a name="nav"></a>
-    <nav class="Page-nav">
-        <img src="/static/images/kickstartcodinglogo.svg" />
+    <nav class="Page-nav layout-container">
+        <img src="/static/images/kickstartcodinglogo.svg" style="grid-column: 1" />
         <ul>
             {% for page in script.navigation %}
                 <li>
@@ -23,7 +23,7 @@
                 </li>
             {% endfor %}
         </ul>
-        <div class="right-links">
+        <div class="right-links" style="grid-column: 3">
             <a href="https://kickstartcoding.online/">Student Portal &raquo;</a>
         </div>
     </nav>
@@ -33,11 +33,8 @@
     </div>
 
     <a name="c"></a> <!-- c = content -->
-    <div class="Page-container">
-        <main class="Page-mainContent">
-            <slot></slot>
-        </main>
-    </div>
+    <slot class="Page-container layout-container">
+    </slot>
 
     <footer class="Page-footer">
         &copy; {{ script.currentYear }} | All Rights Reserved by Page Author
