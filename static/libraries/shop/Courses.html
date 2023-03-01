@@ -1,9 +1,9 @@
-<h2>Courses</h2>
+<h1>Courses</h1>
 <nav>
     <ul>
         {% for course in script.courses %}
             <li>
-                <button>
+                <button @click:=script.selectCourse payload="{{ course.title|lower }}">
                     <span class="step">{{ course.step }}</span>
                     <span class="label">{{ course.title }}</span>
                     <span class="weeks">{{ course.weeks }}</span>
@@ -13,11 +13,20 @@
     </ul>
 </nav>
 
-<h2>Course Segments</h2>
+<h1>Course Segments</h1>
+
 <main>
-{% for seg in staticdata %}
-    <article title="{{ seg.title }}">
-        <div class="course-wrapper">
+
+{% if state.selected %}
+    <aside>
+        {{ script.visibleSegments|length }}/{{ script.segments|length }}
+        <button @click:=script.selectCourse payload="">{{ state.selected }} x</button>
+    </aside>
+{% endif %}
+
+{% for seg in script.visibleSegments %}
+    <article title="{{ seg.subtitle }}">
+        <div class="course-wrapper {% if state.selected %}course-wrapper--selected{% endif %}">
             <div class="h3-wrapper">
                 {% if seg.title %}
                     <h3>{{ seg.title }}</h3>

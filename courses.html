@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html><head>
 
 
-<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-xxolrhpm.css" /></head><body>
+<title>Welcome</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-x1hp3f9u.css" /></head><body>
     
     
     
@@ -74,12 +74,12 @@
 packages include lifetime access to our entire course curriculum.</p>
 <p>Lifetime access to all courses: $149</p>
 
-<x-courses modulo-original-html=""><h2>Courses</h2>
+<x-courses modulo-original-html=""><h1>Courses</h1>
 <nav>
     <ul>
         
             <li>
-                <button>
+                <button @click:="script.selectCourse" payload="prep">
                     <span class="step">1</span>
                     <span class="label">Prep</span>
                     <span class="weeks">2-6 weeks</span>
@@ -87,7 +87,7 @@ packages include lifetime access to our entire course curriculum.</p>
             </li>
         
             <li>
-                <button>
+                <button @click:="script.selectCourse" payload="fundamentals">
                     <span class="step">2</span>
                     <span class="label">Fundamentals</span>
                     <span class="weeks">4-12 weeks</span>
@@ -95,7 +95,7 @@ packages include lifetime access to our entire course curriculum.</p>
             </li>
         
             <li>
-                <button>
+                <button @click:="script.selectCourse" payload="backend">
                     <span class="step">3</span>
                     <span class="label">Backend</span>
                     <span class="weeks">4-12 weeks</span>
@@ -103,7 +103,7 @@ packages include lifetime access to our entire course curriculum.</p>
             </li>
         
             <li>
-                <button>
+                <button @click:="script.selectCourse" payload="frontend">
                     <span class="step">4</span>
                     <span class="label">Frontend</span>
                     <span class="weeks">6-14 weeks</span>
@@ -111,7 +111,7 @@ packages include lifetime access to our entire course curriculum.</p>
             </li>
         
             <li>
-                <button>
+                <button @click:="script.selectCourse" payload="career">
                     <span class="step">5</span>
                     <span class="label">Career</span>
                     <span class="weeks">4-12 weeks</span>
@@ -121,11 +121,15 @@ packages include lifetime access to our entire course curriculum.</p>
     </ul>
 </nav>
 
-<h2>Course Segments</h2>
+<h1>Course Segments</h1>
+
 <main>
 
-    <article title="Foundations">
-        <div class="course-wrapper">
+
+
+
+    <article title="Web Design: Intro to HTML and CSS">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Foundations</h3>
@@ -151,8 +155,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="Foundations">
-        <div class="course-wrapper">
+    <article title="Web Design: Components &amp; Frameworks">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Foundations</h3>
@@ -178,8 +182,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Kickstart Prework">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Prep</h3>
@@ -209,8 +213,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Static Sites &amp; Bootstrap">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Fundamentals</h3>
@@ -238,8 +242,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Automation: Bash, Git, and Python Scripts">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Fundamentals</h3>
@@ -267,8 +271,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Computer Programming with Python">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Fundamentals</h3>
@@ -296,8 +300,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Intro to Networking with Python">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Backend</h3>
@@ -325,8 +329,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Practical Django">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Backend</h3>
@@ -354,8 +358,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Intro to Databases with Postgres SQL">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Backend</h3>
@@ -383,8 +387,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Modern Web: Vanilla JS">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Frontend</h3>
@@ -412,8 +416,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Thinking in React">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Frontend</h3>
@@ -441,8 +445,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Full Stack JS: MERN, Redux, and Routing">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Frontend</h3>
@@ -470,8 +474,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Kickstart Career">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Career</h3>
@@ -499,8 +503,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Algorithms: Computer Science for Job Seekers">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Career</h3>
@@ -528,8 +532,8 @@ packages include lifetime access to our entire course curriculum.</p>
         </div>
     </article>
 
-    <article title="undefined">
-        <div class="course-wrapper">
+    <article title="Career Capstone">
+        <div class="course-wrapper ">
             <div class="h3-wrapper">
                 
                     <h3>Career</h3>
@@ -744,7 +748,7 @@ course curriculum.</strong></p>
         | <a href="https://modulojs.org/" title="Made with Modulo.js" target="_blank">%</a>
     </footer>
 
-<script src="/_modulo/modulo-build-x1cni38k.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
+<script src="/_modulo/modulo-build-xxr07vit.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
 modulo.assets.require("library1_configuration");
 modulo.assets.require("library_Page");
 modulo.assets.require("library_CourseList");

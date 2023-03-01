@@ -22,12 +22,18 @@
     <Template
         -src="/static/libraries/shop/Courses.html"
     ></Template>
+
     <Style
         -src="/static/libraries/shop/Courses.css"
     ></Style>
+
     <StaticData
         -src="/static/libraries/shop/Courses.js"
     ></StaticData>
+
+    <State
+        selected=""
+    ></State>
     <Script>
         const courses = [
             {
@@ -56,8 +62,19 @@
                 step: 5,
             },
         ];
+
+        function selectCourse(slug) {
+            console.log('state.selected=', slug);
+            state.selected = slug;
+        }
+
         function prepareCallback() {
-            return { courses };
+            let segments = staticdata;
+            let visibleSegments = staticdata;
+            if (state.selected) {
+                visibleSegments = staticdata.filter(seg => seg.course.toLowerCase() === state.selected);
+            }
+            return { courses, segments, visibleSegments };
         }
     </Script>
 </Component>
