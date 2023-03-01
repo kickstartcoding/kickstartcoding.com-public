@@ -19,8 +19,8 @@ window.moduloBuild.modules["x1tcfakf"] = function library1_Courses (modulo) {
         return x_Courses;
     
 };
-window.moduloBuild.modules["xxdl2fc7"] = function library1_Courses_script (modulo) {
-var script = { exports: {} }; 
+window.moduloBuild.modules["xx68j3kf"] = function library1_Courses_script (modulo) {
+var script = { exports: {} }; var staticdata, state;
 
         const courses = [
             {
@@ -49,21 +49,34 @@ var script = { exports: {} };
                 step: 5,
             },
         ];
+
+        function selectCourse(slug) {
+            console.log('state.selected=', slug);
+            state.selected = slug;
+        }
+
         function prepareCallback() {
-            return { courses };
+            let segments = staticdata;
+            let visibleSegments = staticdata;
+            if (state.selected) {
+                visibleSegments = staticdata.filter(seg => seg.course.toLowerCase() === state.selected);
+            }
+            return { courses, segments, visibleSegments };
         }
     
-return {"prepareCallback": typeof prepareCallback !== "undefined" ? prepareCallback : undefined, setLocalVariables: function(o) {}, exports: script.exports }
+return {"selectCourse": typeof selectCourse !== "undefined" ? selectCourse : undefined, "prepareCallback": typeof prepareCallback !== "undefined" ? prepareCallback : undefined, setLocalVariables: function(o) {staticdata=o.staticdata; state=o.state}, exports: script.exports }
 
 };
 window.moduloBuild.modules["xx2kg559"] = function library1_Courses_staticdata (modulo) {
 return [{"title":"Foundations","subtitle":"Web Design: Intro to HTML and CSS","course":"prep","content":"Learn the basics of HTML and CSS to create cool, useful websites from scratch.","img":"computer-g0e7058b72_1280.jpg","imgalt":"A computer being programmed","imgfg":"white"},{"title":"Foundations","subtitle":"Web Design: Components & Frameworks","course":"prep","content":"Learn design trends, how to use frameworks including Tailwind and Netlify, and how to re-use layouts and components.","img":"hd-wallpaper-g721518917_1280.jpg","imgalt":"Illustration of rainbow going through monitor","imgfg":"white"},{"course":"prep","subtitle":"Kickstart Prework","img":"plans-gb63d02c1d_1280.jpg","content":"\n          Get acquainted to coding on your personal computer or a provided\n          Linux Lab account. Prep your computer, get familiar with tech terms,\n          and learn markdown.\n        "},{"course":"fundamentals","img":"laptop-g4d7844033_1280.png","subtitle":"Static Sites & Bootstrap","content":"Peel back the technologies of the web in this whirlwind tour\n        of HTML, CSS, Dev Tools, column-based layouts, responsive design and\n        Bootstrap 5"},{"course":"fundamentals","img":"apple-ga7d81315e_1280.png","subtitle":"Automation: Bash, Git, and Python Scripts","content":"Learn how to use Git to keep your code safe under version control.\n        Learn effective terminal use, and how to write Bash and Python scripts\n        to replace tedious tasks."},{"course":"fundamentals","img":"background-g8ee7d113b_1280.jpg","subtitle":"Computer Programming with Python","content":"Begin a classic introduction to backend programming with\n        Python, learning core data types and control-flow structures. Go deeper\n        with OOP, Pipenv, and Jinja templating."},{"course":"backend","subtitle":"Intro to Networking with Python","img":"background-ged739cdbf_1280.jpg","imgfg":"white","content":"Learn about the Internet, networking, and server-side\n        programming. You will use web APIs, implement HTTP over TCP/IP, and\n        finally basic request routing and web apps."},{"course":"backend","subtitle":"Practical Django","imgalt":"Cube in a world of cubes","img":"cubes-g21a82afce_1280.jpg","imgfg":"white","content":"Learn the best practices from a 10+ year Django industry\n        veteran: MVC, CRUD, forms, urls, users, admin, models, data cardinality\n        (eg Many-To-Many), unit testing, and much more."},{"course":"backend","img":"server-g6892d162b_1280.jpg","imgfg":"white","subtitle":"Intro to Databases with Postgres SQL","content":"Learn SQL basics on a Postgres DB, before diving into JOINs,\n        constraints, query analysis, indexes and optimization, trigram-based\n        full-text search, geodata, and more."},{"course":"frontend","imgfg":"white","img":"retro-g526726a00_1280.jpg","subtitle":"Modern Web: Vanilla JS","content":"Learn modern JavaScript, including let, const, iterators, and\n        DOM manipulation. Dive into tricky CSS concepts like ancestor\n        positioning and pseudo-elements."},{"course":"frontend","img":"colorful-g427212bf2_1280.jpg","imgfg":"white","subtitle":"Thinking in React","content":"In this hooks-based React course, you go beyond just learning\n        the JSX syntax, and practice \"thinking in React\" with data-flow,\n        lifting state, and more."},{"course":"frontend","imgfg":"white","img":"wallpaper-gbaac742b2_1280.jpg","subtitle":"Full Stack JS: MERN, Redux, and Routing","content":"Take your React JS skills to the full stack by learning\n        MongoDB, Express.JS, and Node.js. Learn Redux for state management, and\n        Routing for multi-page apps."},{"course":"career","img":"people-g923420017_1280.jpg","imgfg":"white","subtitle":"Kickstart Career","content":"Redo your resume, polish your profile, and hone your\n        networking skills. Practice interviews and develop a \"elevator pitch\"\n        to market yourself for your next job."},{"course":"career","subtitle":"Algorithms: Computer Science for Job Seekers","img":"fractal-gdd9943fe4_1280.jpg","imgfg":"white","content":"A CS course hyper-focused on whiteboard interviews. Learn Big\n        O, time complexity analysis, sorting, dynamic programming, recursion,\n        coding puzzle techniques, and more."},{"course":"career","img":"drawing-g538254e05_1280.jpg","subtitle":"Career Capstone","content":"Use a 5-milestone process to build a software product from\n        specs to launch. Learn how tech roles interlock, including agile\n        Product Management and DevOps."}];
 };
-window.moduloBuild.modules["xxd80tos"] = function library1_Courses_template (modulo) {
+window.moduloBuild.modules["x1hlutv9"] = function library1_Courses_template (modulo) {
 return function (CTX, G) { var OUT=[];
-  OUT.push("<h2>Courses</h2>\n<nav>\n    <ul>\n        "); // "<h2>Courses</h2><nav><ul>"
+  OUT.push("<h1>Courses</h1>\n<nav>\n    <ul>\n        "); // "<h1>Courses</h1><nav><ul>"
   var ARR0=CTX.script.courses;for (var KEY in ARR0) {CTX. course=ARR0[KEY]; // "for course in script.courses"
-  OUT.push("\n            <li>\n                <button>\n                    <span class=\"step\">"); // "<li><button><span class=\"step\">"
+  OUT.push("\n            <li>\n                <button @click:=script.selectCourse payload=\""); // "<li><button @click:=script.selectCourse payload=\""
+  OUT.push(G.escapeText(G.filters["lower"](CTX.course.title))); // "course.title|lower"
+  OUT.push("\">\n                    <span class=\"step\">"); // "\"><span class=\"step\">"
   OUT.push(G.escapeText(CTX.course.step)); // "course.step"
   OUT.push("</span>\n                    <span class=\"label\">"); // "</span><span class=\"label\">"
   OUT.push(G.escapeText(CTX.course.title)); // "course.title"
@@ -71,11 +84,25 @@ return function (CTX, G) { var OUT=[];
   OUT.push(G.escapeText(CTX.course.weeks)); // "course.weeks"
   OUT.push("</span>\n                </button>\n            </li>\n        "); // "</span></button></li>"
   } // "endfor"
-  OUT.push("\n    </ul>\n</nav>\n\n<h2>Course Segments</h2>\n<main>\n"); // "</ul></nav><h2>Course Segments</h2><main>"
-  var ARR0=CTX.staticdata;for (var KEY in ARR0) {CTX. seg=ARR0[KEY]; // "for seg in staticdata"
+  OUT.push("\n    </ul>\n</nav>\n\n<h1>Course Segments</h1>\n\n<main>\n\n"); // "</ul></nav><h1>Course Segments</h1><main>"
+  if (CTX.state.selected) { // "if state.selected"
+  OUT.push("\n    <aside>\n        "); // "<aside>"
+  OUT.push(G.escapeText(G.filters["length"](CTX.script.visibleSegments))); // "script.visibleSegments|length"
+  OUT.push("/"); // "/"
+  OUT.push(G.escapeText(G.filters["length"](CTX.script.segments))); // "script.segments|length"
+  OUT.push("\n        <button @click:=script.selectCourse payload=\"\">"); // "<button @click:=script.selectCourse payload=\"\">"
+  OUT.push(G.escapeText(CTX.state.selected)); // "state.selected"
+  OUT.push(" x</button>\n    </aside>\n"); // "x</button></aside>"
+  } // "endif"
+  OUT.push("\n\n"); // ""
+  var ARR0=CTX.script.visibleSegments;for (var KEY in ARR0) {CTX. seg=ARR0[KEY]; // "for seg in script.visibleSegments"
   OUT.push("\n    <article title=\""); // "<article title=\""
-  OUT.push(G.escapeText(CTX.seg.title)); // "seg.title"
-  OUT.push("\">\n        <div class=\"course-wrapper\">\n            <div class=\"h3-wrapper\">\n                "); // "\"><div class=\"course-wrapper\"><div class=\"h3-wrapper\">"
+  OUT.push(G.escapeText(CTX.seg.subtitle)); // "seg.subtitle"
+  OUT.push("\">\n        <div class=\"course-wrapper "); // "\"><div class=\"course-wrapper"
+  if (CTX.state.selected) { // "if state.selected"
+  OUT.push("course-wrapper--selected"); // "course-wrapper--selected"
+  } // "endif"
+  OUT.push("\">\n            <div class=\"h3-wrapper\">\n                "); // "\"><div class=\"h3-wrapper\">"
   if (CTX.seg.title) { // "if seg.title"
   OUT.push("\n                    <h3>"); // "<h3>"
   OUT.push(G.escapeText(CTX.seg.title)); // "seg.title"
@@ -223,77 +250,6 @@ window.moduloBuild.modules["xx5qsu45"] = function library1_configuration (modulo
     });
 
 };
-window.moduloBuild.modules["xxsgbbt9"] = function library_CourseList (modulo) {
-
-        const def = modulo.definitions['library_CourseList'];
-        class x_CourseList extends window.HTMLElement {
-            constructor() {
-                super();
-                modulo.registry.utils.initElement(modulo, def, this);
-            }
-            connectedCallback() {
-                window.setTimeout(() => this.parsedCallback(), 0);
-            }
-            parsedCallback() {
-                modulo.registry.utils.mountElement(modulo, def, this);
-            }
-        }
-        modulo.registry.utils.initClass(modulo, def, x_CourseList);
-        window.customElements.define(def.TagName, x_CourseList);
-        return x_CourseList;
-    
-};
-window.moduloBuild.modules["xxvd2rij"] = function library_CourseList_script (modulo) {
-var script = { exports: {} }; 
-
-        const courses = [
-            {
-                title: 'Foundations',
-                image: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-                isFree: true,
-            },
-            {
-                title: 'Prework',
-                image: 'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-            },
-            {
-                title: 'Fundamentals',
-                image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-            },
-            {
-                title: 'Backend',
-                image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80',
-            },
-            {
-                title: 'Frontend',
-                image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-            },
-            {
-                title: 'Career',
-                image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-            },
-            {
-                title: 'Capstone',
-                image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-            },
-        ];
-        function initializedCallback() {
-            return { courses };
-        }
-    
-return {"initializedCallback": typeof initializedCallback !== "undefined" ? initializedCallback : undefined, setLocalVariables: function(o) {}, exports: script.exports }
-
-};
-window.moduloBuild.modules["xxt5objf"] = function library_CourseList_template (modulo) {
-return function (CTX, G) { var OUT=[];
-  OUT.push("<!-- Product List -->\n<section class=\"py-10 bg-gray-100\">\n  <div class=\"mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4\">\n    "); // "<!-- Product List --><section class=\"py-10 bg-gray-100\"><div class=\"mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4\">"
-  var ARR0=CTX.script.courses;for (var KEY in ARR0) {CTX. course=ARR0[KEY]; // "for course in script.courses"
-  OUT.push("\n      <article class=\"rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 \">\n        <a href=\"#\">\n          <div class=\"relative flex items-end overflow-hidden rounded-xl\">\n            <img src=\"https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\" alt=\"Hotel Photo\" />\n            <div class=\"flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"h-4 w-4\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z\" />\n              </svg>\n\n              <button class=\"text-sm\">Add to cart</button>\n            </div>\n          </div>\n\n          <div class=\"mt-1 p-2\">\n            <h2 class=\"text-slate-700\">Adobe Photoshop CC 2022</h2>\n            <p class=\"mt-1 text-sm text-slate-400\">Lisbon, Portugal</p>\n\n            <div class=\"mt-3 flex items-end justify-between\">\n                <p class=\"text-lg font-bold text-blue-500\">$850</p>\n\n              <div class=\"flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"h-4 w-4\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z\" />\n                </svg>\n\n                <button class=\"text-sm\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </a>\n      </article>\n    "); // "<article class=\"rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 \"><a href=\"#\"><div class=\"relative flex items-end overflow-hidden rounded-xl\"><img src=\"https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\" alt=\"Hotel Photo\" /><div class=\"flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"h-4 w-4\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z\" /></svg><button class=\"text-sm\">Add to cart</button></div></div><div class=\"mt-1 p-2\"><h2 class=\"text-slate-700\">Adobe Photoshop CC 2022</h2><p class=\"mt-1 text-sm text-slate-400\">Lisbon, Portugal</p><div class=\"mt-3 flex items-end justify-between\"><p class=\"text-lg font-bold text-blue-500\">$850</p><div class=\"flex items-center space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"h-4 w-4\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z\" /></svg><button class=\"text-sm\">Add to cart</button></div></div></div></a></article>"
-  } // "endfor"
-  OUT.push("\n  </div>\n</section>\n"); // "</div></section>"
-
-return OUT.join(""); };
-};
 window.moduloBuild.modules["x1833ghl"] = function library_Page (modulo) {
 
         const def = modulo.definitions['library_Page'];
@@ -314,7 +270,7 @@ window.moduloBuild.modules["x1833ghl"] = function library_Page (modulo) {
         return x_Page;
     
 };
-window.moduloBuild.modules["xx7a8725"] = function library_Page_script (modulo) {
+window.moduloBuild.modules["x119qatf"] = function library_Page_script (modulo) {
 var script = { exports: {} }; 
 
         function prepareCallback() {
@@ -331,8 +287,8 @@ var script = { exports: {} };
                         file: "courses.html",
                     },
                     {
-                        title: "Community",
-                        file: "community.html",
+                        title: "Outreach",
+                        file: "outreach.html",
                     },
                     {
                         title: "Results",
@@ -345,11 +301,11 @@ var script = { exports: {} };
 return {"prepareCallback": typeof prepareCallback !== "undefined" ? prepareCallback : undefined, setLocalVariables: function(o) {}, exports: script.exports }
 
 };
-window.moduloBuild.modules["x18jtfc3"] = function library_Page_template (modulo) {
+window.moduloBuild.modules["x1dpesfq"] = function library_Page_template (modulo) {
 return function (CTX, G) { var OUT=[];
   OUT.push("<head>\n    <title>"); // "<head><title>"
   OUT.push(G.escapeText(CTX.props.title)); // "props.title"
-  OUT.push("</title>\n    <meta charset=\"utf8\" />\n    <link rel=\"stylesheet\" href=\"/static/css/site.css\" />\n    <link href=\"https://fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700\" rel=\"stylesheet\" type=\"text/css\">\n    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <a name=\"nav\"></a>\n    <nav class=\"Page-nav\">\n        <img src=\"/static/images/kickstartcodinglogo.svg\" />\n        <ul>\n            "); // "</title><meta charset=\"utf8\" /><link rel=\"stylesheet\" href=\"/static/css/site.css\" /><link href=\"https://fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700\" rel=\"stylesheet\" type=\"text/css\"><link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\"></head><body><a name=\"nav\"></a><nav class=\"Page-nav\"><img src=\"/static/images/kickstartcodinglogo.svg\" /><ul>"
+  OUT.push("</title>\n    <meta charset=\"utf8\" />\n    <link rel=\"stylesheet\" href=\"/static/css/site.css\" />\n    <link href=\"https://fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700\" rel=\"stylesheet\" type=\"text/css\">\n    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <a name=\"nav\"></a>\n    <nav class=\"Page-nav layout-container\">\n        <img src=\"/static/images/kickstartcodinglogo.svg\" style=\"grid-column: 1\" />\n        <ul>\n            "); // "</title><meta charset=\"utf8\" /><link rel=\"stylesheet\" href=\"/static/css/site.css\" /><link href=\"https://fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700\" rel=\"stylesheet\" type=\"text/css\"><link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.8.1/css/all.css\" integrity=\"sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf\" crossorigin=\"anonymous\"></head><body><a name=\"nav\"></a><nav class=\"Page-nav layout-container\"><img src=\"/static/images/kickstartcodinglogo.svg\" style=\"grid-column: 1\" /><ul>"
   var ARR0=CTX.script.navigation;for (var KEY in ARR0) {CTX. page=ARR0[KEY]; // "for page in script.navigation"
   OUT.push("\n                <li>\n                    <a href=\""); // "<li><a href=\""
   if (CTX.page.file === CTX.props.navselected) { // "if page.file == props.navselected"
@@ -369,7 +325,19 @@ return function (CTX, G) { var OUT=[];
   OUT.push(G.escapeText(G.filters["upper"](CTX.page.title))); // "page.title|upper"
   OUT.push("\n                    </a>\n                </li>\n            "); // "</a></li>"
   } // "endfor"
-  OUT.push("\n        </ul>\n        <div class=\"right-links\">\n            <a href=\"https://kickstartcoding.online/\">Student Portal &raquo;</a>\n        </div>\n    </nav>\n\n    <div class=\"Page-navHBMenu\">\n        <a href=\"#nav\" class=\"btn-hbmenu\">☰</a>\n    </div>\n\n    <a name=\"c\"></a> <!-- c = content -->\n    <div class=\"Page-container\">\n        <main class=\"Page-mainContent\">\n            <slot></slot>\n        </main>\n    </div>\n\n    <footer class=\"Page-footer\">\n        &copy; "); // "</ul><div class=\"right-links\"><a href=\"https://kickstartcoding.online/\">Student Portal &raquo;</a></div></nav><div class=\"Page-navHBMenu\"><a href=\"#nav\" class=\"btn-hbmenu\">☰</a></div><a name=\"c\"></a><!-- c = content --><div class=\"Page-container\"><main class=\"Page-mainContent\"><slot></slot></main></div><footer class=\"Page-footer\"> &copy;"
+  OUT.push("\n        </ul>\n        <div class=\"right-links\" style=\"grid-column: 3\">\n            <a href=\"https://kickstartcoding.online/\">Student Portal &raquo;</a>\n        </div>\n    </nav>\n\n    <div class=\"Page-navHBMenu\">\n        <a href=\"#nav\" class=\"btn-hbmenu\">☰</a>\n    </div>\n\n    <a name=\"c\"></a> <!-- c = content -->\n    "); // "</ul><div class=\"right-links\" style=\"grid-column: 3\"><a href=\"https://kickstartcoding.online/\">Student Portal &raquo;</a></div></nav><div class=\"Page-navHBMenu\"><a href=\"#nav\" class=\"btn-hbmenu\">☰</a></div><a name=\"c\"></a><!-- c = content -->"
+  if (CTX.props.toptitle) { // "if props.toptitle"
+  OUT.push("\n        <div class=\"Page-container layout-container\" style=\"background: WhiteSmoke\">\n            <h1 class=\"hero-text-top layout-container\" style=\"text-align: left\">\n                <div>"); // "<div class=\"Page-container layout-container\" style=\"background: WhiteSmoke\"><h1 class=\"hero-text-top layout-container\" style=\"text-align: left\"><div>"
+  OUT.push(G.escapeText(CTX.props.toptitle)); // "props.toptitle"
+  OUT.push("</div>\n            </h1>\n            "); // "</div></h1>"
+  if (CTX.props.bottomtitle) { // "if props.bottomtitle"
+  OUT.push("\n                <h1 class=\"hero-text-bottom layout-container\">\n                    <div>"); // "<h1 class=\"hero-text-bottom layout-container\"><div>"
+  OUT.push(G.escapeText(G.filters["safe"](CTX.props.bottomtitle))); // "props.bottomtitle|safe"
+  OUT.push("</div>\n                </h1>\n            "); // "</div></h1>"
+  } // "endif"
+  OUT.push("\n        </div>\n    "); // "</div>"
+  } // "endif"
+  OUT.push("\n    <slot class=\"Page-container layout-container\">\n    </slot>\n\n    <footer class=\"Page-footer\">\n        &copy; "); // "<slot class=\"Page-container layout-container\"></slot><footer class=\"Page-footer\"> &copy;"
   OUT.push(G.escapeText(CTX.script.currentYear)); // "script.currentYear"
   OUT.push(" | All Rights Reserved by Page Author\n        <!-- Feel free to delete this: -->\n        | <a href=\"https://modulojs.org/\" title=\"Made with Modulo.js\" target=\"_blank\">%</a>\n    </footer>\n</body>\n"); // "| All Rights Reserved by Page Author <!-- Feel free to delete this: --> | <a href=\"https://modulojs.org/\" title=\"Made with Modulo.js\" target=\"_blank\">%</a></footer></body>"
 
@@ -378,17 +346,14 @@ return OUT.join(""); };
 window.moduloBuild.nameToHash = {
  "library1_configuration": "xx5qsu45",
  "library_Page": "x1833ghl",
- "library_CourseList": "xxsgbbt9",
- "library_Page_script": "xx7a8725",
- "library_CourseList_script": "xxvd2rij",
+ "library_Page_script": "x119qatf",
  "library1_PlanMenu": "x1o5eu4n",
  "library1_Courses": "x1tcfakf",
- "library1_Courses_script": "xxdl2fc7",
- "library_Page_template": "x18jtfc3",
- "library_CourseList_template": "xxt5objf",
+ "library1_Courses_script": "xx68j3kf",
+ "library_Page_template": "x1dpesfq",
  "library1_PlanMenu_template": "xxsj0i29",
  "library1_PlanMenu_staticdata": "x1stuu2s",
- "library1_Courses_template": "xxd80tos",
+ "library1_Courses_template": "x1hlutv9",
  "library1_Courses_staticdata": "xx2kg559"
 };
 window.moduloBuild.definitions = {
@@ -407,8 +372,7 @@ window.moduloBuild.definitions = {
   "DefinitionName": "library",
   "Source": "http://127.0.0.1:6627/static/libraries/layout.html",
   "ChildrenNames": [
-   "library_Page",
-   "library_CourseList"
+   "library_Page"
   ]
  },
  "library1": {
@@ -470,50 +434,14 @@ window.moduloBuild.definitions = {
   ],
   "TagName": "x-page"
  },
- "library_CourseList": {
-  "Parent": "library",
-  "DefName": null,
-  "mode": "regular",
-  "rerender": "event",
-  "engine": "Reconciler",
-  "RenderObj": "component",
-  "DefLoaders": [
-   "DefinedAs",
-   "Src",
-   "Content"
-  ],
-  "DefBuilders": [
-   "CustomElement",
-   "Code"
-  ],
-  "DefFinalizers": [
-   "MainRequire"
-  ],
-  "Directives": [
-   "slotLoad",
-   "eventMount",
-   "eventUnmount",
-   "dataPropMount",
-   "dataPropUnmount"
-  ],
-  "Type": "Component",
-  "namespace": "x",
-  "name": "CourseList",
-  "Name": "CourseList",
-  "DefinitionName": "library_CourseList",
-  "ChildrenNames": [
-   "library_CourseList_props",
-   "library_CourseList_template",
-   "library_CourseList_script"
-  ],
-  "TagName": "x-courselist"
- },
  "library_Page_props": {
   "Parent": "library_Page",
   "DefName": null,
   "Type": "Props",
   "Content": "",
   "title": "",
+  "toptitle": "",
+  "bottomtitle": "",
   "navselected": "",
   "Name": "props",
   "DefinitionName": "library_Page_props"
@@ -528,7 +456,7 @@ window.moduloBuild.definitions = {
   "Name": "template",
   "DefinitionName": "library_Page_template",
   "Source": "http://127.0.0.1:6627/static/libraries/layout/Page.html",
-  "Hash": "Tx18jtfc3"
+  "Hash": "Tx1dpesfq"
  },
  "library_Page_style": {
   "Parent": "library_Page",
@@ -552,40 +480,6 @@ window.moduloBuild.definitions = {
   ],
   "Name": "script",
   "DefinitionName": "library_Page_script",
-  "Directives": []
- },
- "library_CourseList_props": {
-  "Parent": "library_CourseList",
-  "DefName": null,
-  "Type": "Props",
-  "Content": "",
-  "listname": "",
-  "Name": "props",
-  "DefinitionName": "library_CourseList_props"
- },
- "library_CourseList_template": {
-  "Parent": "library_CourseList",
-  "DefName": null,
-  "Type": "Template",
-  "DefFinalizers": [
-   "TemplatePrebuild"
-  ],
-  "Name": "template",
-  "DefinitionName": "library_CourseList_template",
-  "Source": "http://127.0.0.1:6627/static/libraries/layout/CourseList.html",
-  "Hash": "Txxt5objf"
- },
- "library_CourseList_script": {
-  "Parent": "library_CourseList",
-  "DefName": null,
-  "Type": "Script",
-  "lifecycle": null,
-  "DefBuilders": [
-   "Content|ScriptAutoExport",
-   "Code"
-  ],
-  "Name": "script",
-  "DefinitionName": "library_CourseList_script",
   "Directives": []
  },
  "library1_configuration": {
@@ -676,6 +570,7 @@ window.moduloBuild.definitions = {
    "library1_Courses_template",
    "library1_Courses_style",
    "library1_Courses_staticdata",
+   "library1_Courses_state",
    "library1_Courses_script"
   ],
   "TagName": "x-courses"
@@ -774,7 +669,7 @@ window.moduloBuild.definitions = {
   "Name": "template",
   "DefinitionName": "library1_Courses_template",
   "Source": "http://127.0.0.1:6627/static/libraries/shop/Courses.html",
-  "Hash": "Txxd80tos"
+  "Hash": "Tx1hlutv9"
  },
  "library1_Courses_style": {
   "Parent": "library1_Courses",
@@ -917,6 +812,20 @@ window.moduloBuild.definitions = {
     "content": "Use a 5-milestone process to build a software product from\n        specs to launch. Learn how tech roles interlock, including agile\n        Product Management and DevOps."
    }
   ]
+ },
+ "library1_Courses_state": {
+  "Parent": "library1_Courses",
+  "DefName": null,
+  "Type": "State",
+  "Directives": [
+   "bindMount",
+   "bindUnmount"
+  ],
+  "Store": null,
+  "Content": "",
+  "selected": "",
+  "Name": "state",
+  "DefinitionName": "library1_Courses_state"
  },
  "library1_Courses_script": {
   "Parent": "library1_Courses",

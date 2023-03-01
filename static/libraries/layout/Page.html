@@ -33,6 +33,18 @@
     </div>
 
     <a name="c"></a> <!-- c = content -->
+    {% if props.toptitle %}
+        <div class="Page-container layout-container" style="background: WhiteSmoke">
+            <h1 class="hero-text-top layout-container" style="text-align: left">
+                <div>{{ props.toptitle }}</div>
+            </h1>
+            {% if props.bottomtitle %}
+                <h1 class="hero-text-bottom layout-container">
+                    <div>{{ props.bottomtitle|safe }}</div>
+                </h1>
+            {% endif %}
+        </div>
+    {% endif %}
     <slot class="Page-container layout-container">
     </slot>
 

@@ -28,6 +28,10 @@ html * {
     box-sizing: border-box;
 }
 
+html a {
+    color: var(--bluebird);
+}
+
 body {
     margin: 0;
 }
@@ -42,7 +46,7 @@ body {
 }
 
 .Page-container {
-    min-height: calc(100vh - 200px);
+    /*min-height: calc(100vh - 200px);*/
     padding-top: 80px;
     max-width: calc(100vw);
     overflow: hidden;
@@ -170,9 +174,17 @@ body {
     padding-top: 30px
 }
 
+.hero-inset-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
 .hero-image {
     height: 400px;
     padding: 10px;
+    border-radius: 50px;
     border: 3px solid var(--sunshine);
     border-top-width: 10px;
     border-bottom-width: 10px;
@@ -272,7 +284,6 @@ body {
 .Page-container .hero-text-bottom {
     padding-top: 65px;
     margin: 0;
-    margin-top: 35px;
     border-bottom: 3px solid var(--bluebird);
     text-align: right;
     font-size: 4rem; 
@@ -286,7 +297,16 @@ body {
     font-weight: 200;
     font-size: 3rem; 
     padding: 0;
-    margin: 0;
+}
+
+.company-image-cluster {
+}
+
+.company-image-cluster > img {
+    float: right;
+    margin: 10px;
+    opacity: 0.5;
+    max-width: 200px;
 }
 
 
@@ -348,6 +368,13 @@ body {
         margin-right: 20px;
         margin-bottom: 20px;
         z-index: 6;
+    }
+    .hero-inset-grid {
+        display: block; /* go static */
+    }
+    .Page-container .hero-text-top {
+        padding: 0;
+        margin-top: -60px;
     }
 }
 
