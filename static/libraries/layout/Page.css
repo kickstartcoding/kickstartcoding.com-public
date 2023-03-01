@@ -6,6 +6,10 @@
   --granite: #2D2D2D;
   --header: "Raleway";
   --body: "Open Sans";
+  --yellow1: #FFFFAAAA;
+  --yellow2: #FFE35590;
+  --sunshine30: #FFD30050;
+  --golden30: #D9A40050;
 }
 
 html {

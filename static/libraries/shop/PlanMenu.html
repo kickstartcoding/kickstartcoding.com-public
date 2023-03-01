@@ -1,0 +1,63 @@
+
+{% for plan in staticdata %}
+    <article
+        title="{{ plan.title }}"
+        class=" {% if plan.inquire %} bootcamp {% endif %} "
+    >
+        {% if plan.title %}
+            <div class="
+                h3-wrapper
+                {% if plan.inquire %}
+                h3-wrapper--inquire
+                {% endif %}
+            ">
+                <h3>{{ plan.title }}</h3>
+            </div>
+        {% endif %}
+        {% if plan.mostPopular %}
+            <p class="most-popular"><strong>Most popular</strong></p>
+        {% endif %}
+        <p class="online">({{ plan.online|lower|hlinperson|safe }})</p>
+        <p class="lectures">
+            {{ plan.lectures|hlinperson|safe }} Lectures
+        </p>
+        <p class="summary">{{ plan.summary }}</p>
+        {% if plan.crossedPrice %}
+            <p class="prices">
+                <span class="crossed-price">
+                    {{ plan.crossedPrice }}
+                </span>
+            </p>
+        {% else %}
+            <p class="stars">
+                &#9733;&#9733;&#9733;&#9733;&#9733;<br />
+                <span>Five-star rated program*</span>
+            </p>
+        {% endif %}
+
+        <p class="prices">
+            <span class="big-price">{{ plan.price }}</span>
+        </p>
+        <p class="length">
+            {{ plan.length }}
+        </p>
+        {% if plan.price lt 900 %}
+            <a class="buy-btn" href="#">Purchase</a>
+        {% elif plan.inquire %}
+            <a class="buy-btn buy--inquire" href="#">Inquire*</a>
+        {% else %}
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        {% endif %}
+        {% if plan.inquire %}
+            <p class="inquire">* {{ plan.inquire }}</p>
+        {% endif %}
+    </article>
+{% endfor %}
+<div style="grid-column: span 4; font-size: 0.8rem;">
+    <p>* We are proud to have earned 5/5 for our commitment to
+    excellence in affordable coding education. Review sites:
+    <a href="https://www.coursereport.com/schools/kickstart-coding" target="_blank">Course Report</a>,
+    <a href="https://www.switchup.org/bootcamps/kickstart-coding" target="_blank">Switch Up</a>,
+    and <a href="https://www.switchup.org/bootcamps/kickstart-coding" target="_blank">Yelp</a>.
+</div>
+

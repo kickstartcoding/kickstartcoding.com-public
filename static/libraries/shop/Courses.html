@@ -1,0 +1,59 @@
+<h2>Courses</h2>
+<nav>
+    <ul>
+        {% for course in script.courses %}
+            <li>
+                <button>
+                    <span class="step">{{ course.step }}</span>
+                    <span class="label">{{ course.title }}</span>
+                    <span class="weeks">{{ course.weeks }}</span>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<h2>Course Segments</h2>
+<main>
+{% for seg in staticdata %}
+    <article title="{{ seg.title }}">
+        <div class="course-wrapper">
+            <div class="h3-wrapper">
+                {% if seg.title %}
+                    <h3>{{ seg.title }}</h3>
+                {% else %}
+                    <h3>{{ seg.course|capfirst }}</h3>
+                {% endif %}
+                <div
+                  style="
+                      background-image: 
+                          {% if seg.imgfg == 'white' %}
+                            linear-gradient(to bottom left, #11111155, #33333355),
+                          {% else %}
+                            linear-gradient(to bottom left, #eeeeee55, #cccccc55),
+                          {% endif %}
+                          url(/static/images/new_course_photos/{{ seg.img|default:'laptop-g4d7844033_1280.png' }});
+                      color: {{ seg.imgfg|default:'black' }}
+                  "
+                  class="courseimg"
+                >
+                {% if seg.subtitle %}
+                    <h4>{{ seg.subtitle }}</h4>
+                {% endif %}
+                </div>
+            </div>
+            {% if seg.content %}
+                <p>{{ seg.content }}</p>
+            {% endif %}
+            {% if seg.updated %}
+                <p>{{ seg.updated }}</p>
+            {% endif %}
+            {% comment %}
+            {% if seg.description %}
+                <p>{{ seg.description }}</p>
+            {% endif %}
+            {% endcomment %}
+        </div>
+    </article>
+{% endfor %}
+</main>

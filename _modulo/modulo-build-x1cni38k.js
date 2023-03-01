@@ -19,130 +19,208 @@ window.moduloBuild.modules["x1tcfakf"] = function library1_Courses (modulo) {
         return x_Courses;
     
 };
-window.moduloBuild.modules["xx6bs2m0"] = function library1_Courses_script (modulo) {
-var script = { exports: {} }; var props;
+window.moduloBuild.modules["xxdl2fc7"] = function library1_Courses_script (modulo) {
+var script = { exports: {} }; 
 
-        const plans = [
+        const courses = [
             {
-                title: 'Group Tutoring',
-                online: 'Online only',
-                lectures: 'Prerecorded',
-                price: 149,
-                length: '2 months',
-                summary: `For only $149, unlock lifetime access to entire video
-                curriculum for self-paced work, in addition to 2 months of Q&A
-                help during weekly group review sessions.`,
+                title: 'Prep',
+                weeks: '2-6 weeks',
+                step: 1,
             },
             {
-                title: 'Private Tutoring',
-                online: 'Online only',
-                lectures: 'Prerecorded',
-                price: 499,
-                length: '2 months',
-                summary: `Level up your skills by purchasing a 1:1 tutoring
-                program, affordably priced to renew every 2 months. Includes
-                video curriculum and all group tutoring options as well.`,
+                title: 'Fundamentals',
+                weeks: '4-12 weeks',
+                step: 2,
             },
             {
-                title: 'Hybrid Bootcamp',
-                mostPopular: true,
-                online: 'In-person and/or online',
-                lectures: 'Prerecorded',
-                price: 2499,
-                length: '9 months',
-                summary: `We take a coding beginner to job-ready status in 9
-                months. The price includes 6 months of 1:1 tutoring, 9 months
-                of group work sessions, and job-hunt coaching to kickstart your
-                career in tech.`,
+                title: 'Backend',
+                weeks: '4-12 weeks',
+                step: 3,
             },
             {
-                title: 'Oakland Bootcamp',
-                online: 'In-person only',
-                lectures: 'Live, On-Site',
-                crossedPrice: '$10,992',
-                price: 8499,
-                length: '9 month bundle',
-                inquire: `Note: Next cohort only will begin after Q1 2024`,
-                summary: `Join us in Oakland for our live, on-site full stack
-                coding bootcamp. Bundle consists of five courses, and 1:1
-                tutoring plan.`,
+                title: 'Frontend',
+                weeks: '6-14 weeks',
+                step: 4,
+            },
+            {
+                title: 'Career' ,
+                weeks: '4-12 weeks',
+                step: 5,
             },
         ];
         function prepareCallback() {
-            const items = plans; // props.show === 'plans' ? plans : courses;
-            return { plans };
+            return { courses };
         }
     
-return {"prepareCallback": typeof prepareCallback !== "undefined" ? prepareCallback : undefined, setLocalVariables: function(o) {props=o.props}, exports: script.exports }
+return {"prepareCallback": typeof prepareCallback !== "undefined" ? prepareCallback : undefined, setLocalVariables: function(o) {}, exports: script.exports }
 
 };
-window.moduloBuild.modules["xxi3c9en"] = function library1_Courses_template (modulo) {
+window.moduloBuild.modules["xx2kg559"] = function library1_Courses_staticdata (modulo) {
+return [{"title":"Foundations","subtitle":"Web Design: Intro to HTML and CSS","course":"prep","content":"Learn the basics of HTML and CSS to create cool, useful websites from scratch.","img":"computer-g0e7058b72_1280.jpg","imgalt":"A computer being programmed","imgfg":"white"},{"title":"Foundations","subtitle":"Web Design: Components & Frameworks","course":"prep","content":"Learn design trends, how to use frameworks including Tailwind and Netlify, and how to re-use layouts and components.","img":"hd-wallpaper-g721518917_1280.jpg","imgalt":"Illustration of rainbow going through monitor","imgfg":"white"},{"course":"prep","subtitle":"Kickstart Prework","img":"plans-gb63d02c1d_1280.jpg","content":"\n          Get acquainted to coding on your personal computer or a provided\n          Linux Lab account. Prep your computer, get familiar with tech terms,\n          and learn markdown.\n        "},{"course":"fundamentals","img":"laptop-g4d7844033_1280.png","subtitle":"Static Sites & Bootstrap","content":"Peel back the technologies of the web in this whirlwind tour\n        of HTML, CSS, Dev Tools, column-based layouts, responsive design and\n        Bootstrap 5"},{"course":"fundamentals","img":"apple-ga7d81315e_1280.png","subtitle":"Automation: Bash, Git, and Python Scripts","content":"Learn how to use Git to keep your code safe under version control.\n        Learn effective terminal use, and how to write Bash and Python scripts\n        to replace tedious tasks."},{"course":"fundamentals","img":"background-g8ee7d113b_1280.jpg","subtitle":"Computer Programming with Python","content":"Begin a classic introduction to backend programming with\n        Python, learning core data types and control-flow structures. Go deeper\n        with OOP, Pipenv, and Jinja templating."},{"course":"backend","subtitle":"Intro to Networking with Python","img":"background-ged739cdbf_1280.jpg","imgfg":"white","content":"Learn about the Internet, networking, and server-side\n        programming. You will use web APIs, implement HTTP over TCP/IP, and\n        finally basic request routing and web apps."},{"course":"backend","subtitle":"Practical Django","imgalt":"Cube in a world of cubes","img":"cubes-g21a82afce_1280.jpg","imgfg":"white","content":"Learn the best practices from a 10+ year Django industry\n        veteran: MVC, CRUD, forms, urls, users, admin, models, data cardinality\n        (eg Many-To-Many), unit testing, and much more."},{"course":"backend","img":"server-g6892d162b_1280.jpg","imgfg":"white","subtitle":"Intro to Databases with Postgres SQL","content":"Learn SQL basics on a Postgres DB, before diving into JOINs,\n        constraints, query analysis, indexes and optimization, trigram-based\n        full-text search, geodata, and more."},{"course":"frontend","imgfg":"white","img":"retro-g526726a00_1280.jpg","subtitle":"Modern Web: Vanilla JS","content":"Learn modern JavaScript, including let, const, iterators, and\n        DOM manipulation. Dive into tricky CSS concepts like ancestor\n        positioning and pseudo-elements."},{"course":"frontend","img":"colorful-g427212bf2_1280.jpg","imgfg":"white","subtitle":"Thinking in React","content":"In this hooks-based React course, you go beyond just learning\n        the JSX syntax, and practice \"thinking in React\" with data-flow,\n        lifting state, and more."},{"course":"frontend","imgfg":"white","img":"wallpaper-gbaac742b2_1280.jpg","subtitle":"Full Stack JS: MERN, Redux, and Routing","content":"Take your React JS skills to the full stack by learning\n        MongoDB, Express.JS, and Node.js. Learn Redux for state management, and\n        Routing for multi-page apps."},{"course":"career","img":"people-g923420017_1280.jpg","imgfg":"white","subtitle":"Kickstart Career","content":"Redo your resume, polish your profile, and hone your\n        networking skills. Practice interviews and develop a \"elevator pitch\"\n        to market yourself for your next job."},{"course":"career","subtitle":"Algorithms: Computer Science for Job Seekers","img":"fractal-gdd9943fe4_1280.jpg","imgfg":"white","content":"A CS course hyper-focused on whiteboard interviews. Learn Big\n        O, time complexity analysis, sorting, dynamic programming, recursion,\n        coding puzzle techniques, and more."},{"course":"career","img":"drawing-g538254e05_1280.jpg","subtitle":"Career Capstone","content":"Use a 5-milestone process to build a software product from\n        specs to launch. Learn how tech roles interlock, including agile\n        Product Management and DevOps."}];
+};
+window.moduloBuild.modules["xxd80tos"] = function library1_Courses_template (modulo) {
 return function (CTX, G) { var OUT=[];
-  OUT.push("\n        "); // ""
-  var ARR0=CTX.script.plans;for (var KEY in ARR0) {CTX. plan=ARR0[KEY]; // "for plan in script.plans"
-  OUT.push("\n            "); // ""
-  OUT.push("\n            <article title=\""); // "<article title=\""
-  OUT.push(G.escapeText(CTX.plan.title)); // "plan.title"
-  OUT.push("\" class=\" "); // "\" class=\""
-  if (CTX.plan.inquire) { // "if plan.inquire"
-  OUT.push(" bootcamp "); // "bootcamp"
-  } // "endif"
-  OUT.push(" \">\n                <div class=\"\n                    h3-wrapper\n                    "); // "\"><div class=\" h3-wrapper"
-  if (CTX.plan.inquire) { // "if plan.inquire"
-  OUT.push("\n                    h3-wrapper--inquire\n                    "); // "h3-wrapper--inquire"
-  } // "endif"
-  OUT.push("\n                \">\n                    <h3>"); // "\"><h3>"
-  OUT.push(G.escapeText(CTX.plan.title)); // "plan.title"
-  OUT.push("</h3>\n                </div>\n                "); // "</h3></div>"
-  if (CTX.plan.mostPopular) { // "if plan.mostPopular"
-  OUT.push("\n                    <p class=\"most-popular\"><strong>Most popular</strong></p>\n                "); // "<p class=\"most-popular\"><strong>Most popular</strong></p>"
-  } // "endif"
-  OUT.push("\n                <p class=\"online\">("); // "<p class=\"online\">("
-  OUT.push(G.escapeText(G.filters["safe"](G.filters["hlinperson"](G.filters["lower"](CTX.plan.online))))); // "plan.online|lower|hlinperson|safe"
-  OUT.push(")</p>\n                <p class=\"lectures\">\n                    "); // ")</p><p class=\"lectures\">"
-  OUT.push(G.escapeText(G.filters["safe"](G.filters["hlinperson"](CTX.plan.lectures)))); // "plan.lectures|hlinperson|safe"
-  OUT.push(" Lectures\n                </p>\n                <p class=\"summary\">"); // "Lectures </p><p class=\"summary\">"
-  OUT.push(G.escapeText(CTX.plan.summary)); // "plan.summary"
-  OUT.push("</p>\n                "); // "</p>"
-  if (CTX.plan.crossedPrice) { // "if plan.crossedPrice"
-  OUT.push("\n                    <p class=\"prices\">\n                        <span class=\"crossed-price\">\n                            "); // "<p class=\"prices\"><span class=\"crossed-price\">"
-  OUT.push(G.escapeText(CTX.plan.crossedPrice)); // "plan.crossedPrice"
-  OUT.push("\n                        </span>\n                    </p>\n                "); // "</span></p>"
-  } else { // "else"
-  OUT.push("\n                    <p class=\"stars\">\n                        ★★★★★<br>\n                        <span>Five-star rated program*</span>\n                    </p>\n                "); // "<p class=\"stars\"> ★★★★★<br><span>Five-star rated program*</span></p>"
-  } // "endif"
-  OUT.push("\n\n                <p class=\"prices\">\n                    <span class=\"big-price\">"); // "<p class=\"prices\"><span class=\"big-price\">"
-  OUT.push(G.escapeText(CTX.plan.price)); // "plan.price"
-  OUT.push("</span>\n                </p>\n                <p class=\"length\">\n                    "); // "</span></p><p class=\"length\">"
-  OUT.push(G.escapeText(CTX.plan.length)); // "plan.length"
-  OUT.push("\n                </p>\n                "); // "</p>"
-  if (CTX.plan.price < 900) { // "if plan.price lt 900"
-  OUT.push("\n                    <a class=\"buy-btn\" href=\"#\">Purchase</a>\n                "); // "<a class=\"buy-btn\" href=\"#\">Purchase</a>"
-  } else if (CTX.plan.inquire) { // "elif plan.inquire"
-  OUT.push("\n                    <a class=\"buy-btn buy--inquire\" href=\"#\">Inquire*</a>\n                "); // "<a class=\"buy-btn buy--inquire\" href=\"#\">Inquire*</a>"
-  } else { // "else"
-  OUT.push("\n                    <a class=\"buy-btn buy--apply\" href=\"https://kickstartcoding.online/apply/\">Apply</a>\n                "); // "<a class=\"buy-btn buy--apply\" href=\"https://kickstartcoding.online/apply/\">Apply</a>"
-  } // "endif"
-  OUT.push("\n                "); // ""
-  if (CTX.plan.inquire) { // "if plan.inquire"
-  OUT.push("\n                    <p class=\"inquire\">* "); // "<p class=\"inquire\">*"
-  OUT.push(G.escapeText(CTX.plan.inquire)); // "plan.inquire"
-  OUT.push("</p>\n                "); // "</p>"
-  } // "endif"
-  OUT.push("\n            </article>\n        "); // "</article>"
+  OUT.push("<h2>Courses</h2>\n<nav>\n    <ul>\n        "); // "<h2>Courses</h2><nav><ul>"
+  var ARR0=CTX.script.courses;for (var KEY in ARR0) {CTX. course=ARR0[KEY]; // "for course in script.courses"
+  OUT.push("\n            <li>\n                <button>\n                    <span class=\"step\">"); // "<li><button><span class=\"step\">"
+  OUT.push(G.escapeText(CTX.course.step)); // "course.step"
+  OUT.push("</span>\n                    <span class=\"label\">"); // "</span><span class=\"label\">"
+  OUT.push(G.escapeText(CTX.course.title)); // "course.title"
+  OUT.push("</span>\n                    <span class=\"weeks\">"); // "</span><span class=\"weeks\">"
+  OUT.push(G.escapeText(CTX.course.weeks)); // "course.weeks"
+  OUT.push("</span>\n                </button>\n            </li>\n        "); // "</span></button></li>"
   } // "endfor"
-  OUT.push("\n        <div style=\"grid-column: span 4; font-size: 0.8rem;\">\n            <p>* We are proud to have earned 5/5 for our commitment to\n            excellence in affordable coding education. Review sites:\n            <a href=\"https://www.coursereport.com/schools/kickstart-coding\" target=\"_blank\">Course Report</a>,\n            <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Switch Up</a>,\n            and <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Yelp</a>.\n        </p></div>\n    "); // "<div style=\"grid-column: span 4; font-size: 0.8rem;\"><p>* We are proud to have earned 5/5 for our commitment to excellence in affordable coding education. Review sites: <a href=\"https://www.coursereport.com/schools/kickstart-coding\" target=\"_blank\">Course Report</a>, <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Switch Up</a>, and <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Yelp</a>. </p></div>"
+  OUT.push("\n    </ul>\n</nav>\n\n<h2>Course Segments</h2>\n<main>\n"); // "</ul></nav><h2>Course Segments</h2><main>"
+  var ARR0=CTX.staticdata;for (var KEY in ARR0) {CTX. seg=ARR0[KEY]; // "for seg in staticdata"
+  OUT.push("\n    <article title=\""); // "<article title=\""
+  OUT.push(G.escapeText(CTX.seg.title)); // "seg.title"
+  OUT.push("\">\n        <div class=\"course-wrapper\">\n            <div class=\"h3-wrapper\">\n                "); // "\"><div class=\"course-wrapper\"><div class=\"h3-wrapper\">"
+  if (CTX.seg.title) { // "if seg.title"
+  OUT.push("\n                    <h3>"); // "<h3>"
+  OUT.push(G.escapeText(CTX.seg.title)); // "seg.title"
+  OUT.push("</h3>\n                "); // "</h3>"
+  } else { // "else"
+  OUT.push("\n                    <h3>"); // "<h3>"
+  OUT.push(G.escapeText(G.filters["capfirst"](CTX.seg.course))); // "seg.course|capfirst"
+  OUT.push("</h3>\n                "); // "</h3>"
+  } // "endif"
+  OUT.push("\n                <div\n                  style=\"\n                      background-image: \n                          "); // "<div style=\" background-image:"
+  if (CTX.seg.imgfg === "white") { // "if seg.imgfg == 'white'"
+  OUT.push("\n                            linear-gradient(to bottom left, #11111155, #33333355),\n                          "); // "linear-gradient(to bottom left, #11111155, #33333355),"
+  } else { // "else"
+  OUT.push("\n                            linear-gradient(to bottom left, #eeeeee55, #cccccc55),\n                          "); // "linear-gradient(to bottom left, #eeeeee55, #cccccc55),"
+  } // "endif"
+  OUT.push("\n                          url(/static/images/new_course_photos/"); // "url(/static/images/new_course_photos/"
+  OUT.push(G.escapeText(G.filters["default"](CTX.seg.img,"laptop-g4d7844033_1280.png"))); // "seg.img|default:'laptop-g4d7844033_1280.png'"
+  OUT.push(");\n                      color: "); // "); color:"
+  OUT.push(G.escapeText(G.filters["default"](CTX.seg.imgfg,"black"))); // "seg.imgfg|default:'black'"
+  OUT.push("\n                  \"\n                  class=\"courseimg\"\n                >\n                "); // "\" class=\"courseimg\" >"
+  if (CTX.seg.subtitle) { // "if seg.subtitle"
+  OUT.push("\n                    <h4>"); // "<h4>"
+  OUT.push(G.escapeText(CTX.seg.subtitle)); // "seg.subtitle"
+  OUT.push("</h4>\n                "); // "</h4>"
+  } // "endif"
+  OUT.push("\n                </div>\n            </div>\n            "); // "</div></div>"
+  if (CTX.seg.content) { // "if seg.content"
+  OUT.push("\n                <p>"); // "<p>"
+  OUT.push(G.escapeText(CTX.seg.content)); // "seg.content"
+  OUT.push("</p>\n            "); // "</p>"
+  } // "endif"
+  OUT.push("\n            "); // ""
+  if (CTX.seg.updated) { // "if seg.updated"
+  OUT.push("\n                <p>"); // "<p>"
+  OUT.push(G.escapeText(CTX.seg.updated)); // "seg.updated"
+  OUT.push("</p>\n            "); // "</p>"
+  } // "endif"
+  OUT.push("\n            "); // ""
+  /* // "comment"
+  OUT.push("\n            "); // ""
+  if (CTX.seg.description) { // "if seg.description"
+  OUT.push("\n                <p>"); // "<p>"
+  OUT.push(G.escapeText(CTX.seg.description)); // "seg.description"
+  OUT.push("</p>\n            "); // "</p>"
+  } // "endif"
+  OUT.push("\n            "); // ""
+  */ // "endcomment"
+  OUT.push("\n        </div>\n    </article>\n"); // "</div></article>"
+  } // "endfor"
+  OUT.push("\n</main>\n"); // "</main>"
 
 return OUT.join(""); };
 };
-window.moduloBuild.modules["x1l2160h"] = function library1_configuration (modulo) {
+window.moduloBuild.modules["x1o5eu4n"] = function library1_PlanMenu (modulo) {
+
+        const def = modulo.definitions['library1_PlanMenu'];
+        class x_PlanMenu extends window.HTMLElement {
+            constructor() {
+                super();
+                modulo.registry.utils.initElement(modulo, def, this);
+            }
+            connectedCallback() {
+                window.setTimeout(() => this.parsedCallback(), 0);
+            }
+            parsedCallback() {
+                modulo.registry.utils.mountElement(modulo, def, this);
+            }
+        }
+        modulo.registry.utils.initClass(modulo, def, x_PlanMenu);
+        window.customElements.define(def.TagName, x_PlanMenu);
+        return x_PlanMenu;
+    
+};
+window.moduloBuild.modules["x1stuu2s"] = function library1_PlanMenu_staticdata (modulo) {
+return [{"title":"Group Tutoring","online":"Online only","lectures":"Prerecorded","price":149,"length":"2 months","summary":"For only $149, unlock lifetime access to entire video\n        curriculum for self-paced work, in addition to 2 months of Q&A\n        help during weekly group review sessions."},{"title":"Private Tutoring","online":"Online only","lectures":"Prerecorded","price":499,"length":"2 months","summary":"Level up your skills by purchasing a 1:1 tutoring\n        program, affordably priced to renew every 2 months. Includes\n        video curriculum and all group tutoring options as well."},{"title":"Hybrid Bootcamp","mostPopular":true,"online":"In-person and/or online","lectures":"Prerecorded","price":2499,"length":"9 months","summary":"We take a coding beginner to job-ready status in 9\n        months. The price includes 6 months of 1:1 tutoring, 9 months\n        of group work sessions, and job-hunt coaching to kickstart your\n        career in tech."},{"title":"Oakland Bootcamp","online":"In-person only","lectures":"Live, On-Site","crossedPrice":"$10,992","price":8499,"length":"9 month bundle","inquire":"Note: Next cohort only will begin after Q1 2024","summary":"Join us in Oakland for our live, on-site full stack\n        coding bootcamp. Bundle consists of five courses, and 1:1\n        tutoring plan."}];
+};
+window.moduloBuild.modules["xxsj0i29"] = function library1_PlanMenu_template (modulo) {
+return function (CTX, G) { var OUT=[];
+  OUT.push("\n"); // ""
+  var ARR0=CTX.staticdata;for (var KEY in ARR0) {CTX. plan=ARR0[KEY]; // "for plan in staticdata"
+  OUT.push("\n    <article\n        title=\""); // "<article title=\""
+  OUT.push(G.escapeText(CTX.plan.title)); // "plan.title"
+  OUT.push("\"\n        class=\" "); // "\" class=\""
+  if (CTX.plan.inquire) { // "if plan.inquire"
+  OUT.push(" bootcamp "); // "bootcamp"
+  } // "endif"
+  OUT.push(" \"\n    >\n        "); // "\" >"
+  if (CTX.plan.title) { // "if plan.title"
+  OUT.push("\n            <div class=\"\n                h3-wrapper\n                "); // "<div class=\" h3-wrapper"
+  if (CTX.plan.inquire) { // "if plan.inquire"
+  OUT.push("\n                h3-wrapper--inquire\n                "); // "h3-wrapper--inquire"
+  } // "endif"
+  OUT.push("\n            \">\n                <h3>"); // "\"><h3>"
+  OUT.push(G.escapeText(CTX.plan.title)); // "plan.title"
+  OUT.push("</h3>\n            </div>\n        "); // "</h3></div>"
+  } // "endif"
+  OUT.push("\n        "); // ""
+  if (CTX.plan.mostPopular) { // "if plan.mostPopular"
+  OUT.push("\n            <p class=\"most-popular\"><strong>Most popular</strong></p>\n        "); // "<p class=\"most-popular\"><strong>Most popular</strong></p>"
+  } // "endif"
+  OUT.push("\n        <p class=\"online\">("); // "<p class=\"online\">("
+  OUT.push(G.escapeText(G.filters["safe"](G.filters["hlinperson"](G.filters["lower"](CTX.plan.online))))); // "plan.online|lower|hlinperson|safe"
+  OUT.push(")</p>\n        <p class=\"lectures\">\n            "); // ")</p><p class=\"lectures\">"
+  OUT.push(G.escapeText(G.filters["safe"](G.filters["hlinperson"](CTX.plan.lectures)))); // "plan.lectures|hlinperson|safe"
+  OUT.push(" Lectures\n        </p>\n        <p class=\"summary\">"); // "Lectures </p><p class=\"summary\">"
+  OUT.push(G.escapeText(CTX.plan.summary)); // "plan.summary"
+  OUT.push("</p>\n        "); // "</p>"
+  if (CTX.plan.crossedPrice) { // "if plan.crossedPrice"
+  OUT.push("\n            <p class=\"prices\">\n                <span class=\"crossed-price\">\n                    "); // "<p class=\"prices\"><span class=\"crossed-price\">"
+  OUT.push(G.escapeText(CTX.plan.crossedPrice)); // "plan.crossedPrice"
+  OUT.push("\n                </span>\n            </p>\n        "); // "</span></p>"
+  } else { // "else"
+  OUT.push("\n            <p class=\"stars\">\n                &#9733;&#9733;&#9733;&#9733;&#9733;<br />\n                <span>Five-star rated program*</span>\n            </p>\n        "); // "<p class=\"stars\"> &#9733;&#9733;&#9733;&#9733;&#9733;<br /><span>Five-star rated program*</span></p>"
+  } // "endif"
+  OUT.push("\n\n        <p class=\"prices\">\n            <span class=\"big-price\">"); // "<p class=\"prices\"><span class=\"big-price\">"
+  OUT.push(G.escapeText(CTX.plan.price)); // "plan.price"
+  OUT.push("</span>\n        </p>\n        <p class=\"length\">\n            "); // "</span></p><p class=\"length\">"
+  OUT.push(G.escapeText(CTX.plan.length)); // "plan.length"
+  OUT.push("\n        </p>\n        "); // "</p>"
+  if (CTX.plan.price < 900) { // "if plan.price lt 900"
+  OUT.push("\n            <a class=\"buy-btn\" href=\"#\">Purchase</a>\n        "); // "<a class=\"buy-btn\" href=\"#\">Purchase</a>"
+  } else if (CTX.plan.inquire) { // "elif plan.inquire"
+  OUT.push("\n            <a class=\"buy-btn buy--inquire\" href=\"#\">Inquire*</a>\n        "); // "<a class=\"buy-btn buy--inquire\" href=\"#\">Inquire*</a>"
+  } else { // "else"
+  OUT.push("\n            <a class=\"buy-btn buy--apply\" href=\"https://kickstartcoding.online/apply/\">Apply</a>\n        "); // "<a class=\"buy-btn buy--apply\" href=\"https://kickstartcoding.online/apply/\">Apply</a>"
+  } // "endif"
+  OUT.push("\n        "); // ""
+  if (CTX.plan.inquire) { // "if plan.inquire"
+  OUT.push("\n            <p class=\"inquire\">* "); // "<p class=\"inquire\">*"
+  OUT.push(G.escapeText(CTX.plan.inquire)); // "plan.inquire"
+  OUT.push("</p>\n        "); // "</p>"
+  } // "endif"
+  OUT.push("\n    </article>\n"); // "</article>"
+  } // "endfor"
+  OUT.push("\n<div style=\"grid-column: span 4; font-size: 0.8rem;\">\n    <p>* We are proud to have earned 5/5 for our commitment to\n    excellence in affordable coding education. Review sites:\n    <a href=\"https://www.coursereport.com/schools/kickstart-coding\" target=\"_blank\">Course Report</a>,\n    <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Switch Up</a>,\n    and <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Yelp</a>.\n</div>\n\n"); // "<div style=\"grid-column: span 4; font-size: 0.8rem;\"><p>* We are proud to have earned 5/5 for our commitment to excellence in affordable coding education. Review sites: <a href=\"https://www.coursereport.com/schools/kickstart-coding\" target=\"_blank\">Course Report</a>, <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Switch Up</a>, and <a href=\"https://www.switchup.org/bootcamps/kickstart-coding\" target=\"_blank\">Yelp</a>. </div>"
+
+return OUT.join(""); };
+};
+window.moduloBuild.modules["xx5qsu45"] = function library1_configuration (modulo) {
 
     modulo.register('templateFilter', function hlinperson (text) {
         return text
             .replace(/(in.person)/gi, '<span class="text--hlinperson">$1</span>')
             .replace(/(on.site)/gi, '<span class="text--hlinperson">$1</span>');
     });
-
 
 };
 window.moduloBuild.modules["xxsgbbt9"] = function library_CourseList (modulo) {
@@ -298,16 +376,20 @@ return function (CTX, G) { var OUT=[];
 return OUT.join(""); };
 };
 window.moduloBuild.nameToHash = {
- "library1_configuration": "x1l2160h",
+ "library1_configuration": "xx5qsu45",
  "library_Page": "x1833ghl",
  "library_CourseList": "xxsgbbt9",
  "library_Page_script": "xx7a8725",
  "library_CourseList_script": "xxvd2rij",
+ "library1_PlanMenu": "x1o5eu4n",
  "library1_Courses": "x1tcfakf",
- "library1_Courses_script": "xx6bs2m0",
+ "library1_Courses_script": "xxdl2fc7",
  "library_Page_template": "x18jtfc3",
  "library_CourseList_template": "xxt5objf",
- "library1_Courses_template": "xxi3c9en"
+ "library1_PlanMenu_template": "xxsj0i29",
+ "library1_PlanMenu_staticdata": "x1stuu2s",
+ "library1_Courses_template": "xxd80tos",
+ "library1_Courses_staticdata": "xx2kg559"
 };
 window.moduloBuild.definitions = {
  "library": {
@@ -345,6 +427,7 @@ window.moduloBuild.definitions = {
   "Source": "http://127.0.0.1:6627/static/libraries/shop.html",
   "ChildrenNames": [
    "library1_configuration",
+   "library1_PlanMenu",
    "library1_Courses"
   ]
  },
@@ -520,6 +603,44 @@ window.moduloBuild.definitions = {
   ],
   "Name": "configuration"
  },
+ "library1_PlanMenu": {
+  "Parent": "library1",
+  "DefName": null,
+  "mode": "regular",
+  "rerender": "event",
+  "engine": "Reconciler",
+  "RenderObj": "component",
+  "DefLoaders": [
+   "DefinedAs",
+   "Src",
+   "Content"
+  ],
+  "DefBuilders": [
+   "CustomElement",
+   "Code"
+  ],
+  "DefFinalizers": [
+   "MainRequire"
+  ],
+  "Directives": [
+   "slotLoad",
+   "eventMount",
+   "eventUnmount",
+   "dataPropMount",
+   "dataPropUnmount"
+  ],
+  "Type": "Component",
+  "namespace": "x",
+  "name": "PlanMenu",
+  "Name": "PlanMenu",
+  "DefinitionName": "library1_PlanMenu",
+  "ChildrenNames": [
+   "library1_PlanMenu_template",
+   "library1_PlanMenu_style",
+   "library1_PlanMenu_staticdata"
+  ],
+  "TagName": "x-planmenu"
+ },
  "library1_Courses": {
   "Parent": "library1",
   "DefName": null,
@@ -552,21 +673,96 @@ window.moduloBuild.definitions = {
   "Name": "Courses",
   "DefinitionName": "library1_Courses",
   "ChildrenNames": [
-   "library1_Courses_props",
    "library1_Courses_template",
    "library1_Courses_style",
+   "library1_Courses_staticdata",
    "library1_Courses_script"
   ],
   "TagName": "x-courses"
  },
- "library1_Courses_props": {
-  "Parent": "library1_Courses",
+ "library1_PlanMenu_template": {
+  "Parent": "library1_PlanMenu",
   "DefName": null,
-  "Type": "Props",
-  "Content": "",
-  "show": "",
-  "Name": "props",
-  "DefinitionName": "library1_Courses_props"
+  "Type": "Template",
+  "DefFinalizers": [
+   "TemplatePrebuild"
+  ],
+  "Name": "template",
+  "DefinitionName": "library1_PlanMenu_template",
+  "Source": "http://127.0.0.1:6627/static/libraries/shop/PlanMenu.html",
+  "Hash": "Txxsj0i29"
+ },
+ "library1_PlanMenu_style": {
+  "Parent": "library1_PlanMenu",
+  "DefName": null,
+  "Type": "Style",
+  "DefFinalizers": [
+   "Content|PrefixCSS"
+  ],
+  "Name": "style",
+  "DefinitionName": "library1_PlanMenu_style",
+  "Source": "http://127.0.0.1:6627/static/libraries/shop/PlanMenu.css"
+ },
+ "library1_PlanMenu_staticdata": {
+  "Parent": "library1_PlanMenu",
+  "DefName": null,
+  "Type": "StaticData",
+  "DefLoaders": [
+   "DefinedAs",
+   "DataType",
+   "Src"
+  ],
+  "DefBuilders": [
+   "ContentCSV",
+   "ContentTXT",
+   "ContentJSON",
+   "ContentJS"
+  ],
+  "DefFinalizers": [
+   "Code",
+   "RequireData"
+  ],
+  "Content": "/* JSON data, but evaluated as a JS expression */\n[\n    {\n        title: 'Group Tutoring',\n        online: 'Online only',\n        lectures: 'Prerecorded',\n        price: 149,\n        length: '2 months',\n        summary: `For only $149, unlock lifetime access to entire video\n        curriculum for self-paced work, in addition to 2 months of Q&A\n        help during weekly group review sessions.`,\n    },\n    {\n        title: 'Private Tutoring',\n        online: 'Online only',\n        lectures: 'Prerecorded',\n        price: 499,\n        length: '2 months',\n        summary: `Level up your skills by purchasing a 1:1 tutoring\n        program, affordably priced to renew every 2 months. Includes\n        video curriculum and all group tutoring options as well.`,\n    },\n    {\n        title: 'Hybrid Bootcamp',\n        mostPopular: true,\n        online: 'In-person and/or online',\n        lectures: 'Prerecorded',\n        price: 2499,\n        length: '9 months',\n        summary: `We take a coding beginner to job-ready status in 9\n        months. The price includes 6 months of 1:1 tutoring, 9 months\n        of group work sessions, and job-hunt coaching to kickstart your\n        career in tech.`,\n    },\n    {\n        title: 'Oakland Bootcamp',\n        online: 'In-person only',\n        lectures: 'Live, On-Site',\n        crossedPrice: '$10,992',\n        price: 8499,\n        length: '9 month bundle',\n        inquire: `Note: Next cohort only will begin after Q1 2024`,\n        summary: `Join us in Oakland for our live, on-site full stack\n        coding bootcamp. Bundle consists of five courses, and 1:1\n        tutoring plan.`,\n    },\n]\n",
+  "Name": "staticdata",
+  "DefinitionName": "library1_PlanMenu_staticdata",
+  "Source": "http://127.0.0.1:6627/static/libraries/shop/PlanMenu.js",
+  "data": [
+   {
+    "title": "Group Tutoring",
+    "online": "Online only",
+    "lectures": "Prerecorded",
+    "price": 149,
+    "length": "2 months",
+    "summary": "For only $149, unlock lifetime access to entire video\n        curriculum for self-paced work, in addition to 2 months of Q&A\n        help during weekly group review sessions."
+   },
+   {
+    "title": "Private Tutoring",
+    "online": "Online only",
+    "lectures": "Prerecorded",
+    "price": 499,
+    "length": "2 months",
+    "summary": "Level up your skills by purchasing a 1:1 tutoring\n        program, affordably priced to renew every 2 months. Includes\n        video curriculum and all group tutoring options as well."
+   },
+   {
+    "title": "Hybrid Bootcamp",
+    "mostPopular": true,
+    "online": "In-person and/or online",
+    "lectures": "Prerecorded",
+    "price": 2499,
+    "length": "9 months",
+    "summary": "We take a coding beginner to job-ready status in 9\n        months. The price includes 6 months of 1:1 tutoring, 9 months\n        of group work sessions, and job-hunt coaching to kickstart your\n        career in tech."
+   },
+   {
+    "title": "Oakland Bootcamp",
+    "online": "In-person only",
+    "lectures": "Live, On-Site",
+    "crossedPrice": "$10,992",
+    "price": 8499,
+    "length": "9 month bundle",
+    "inquire": "Note: Next cohort only will begin after Q1 2024",
+    "summary": "Join us in Oakland for our live, on-site full stack\n        coding bootcamp. Bundle consists of five courses, and 1:1\n        tutoring plan."
+   }
+  ]
  },
  "library1_Courses_template": {
   "Parent": "library1_Courses",
@@ -577,7 +773,8 @@ window.moduloBuild.definitions = {
   ],
   "Name": "template",
   "DefinitionName": "library1_Courses_template",
-  "Hash": "Txxi3c9en"
+  "Source": "http://127.0.0.1:6627/static/libraries/shop/Courses.html",
+  "Hash": "Txxd80tos"
  },
  "library1_Courses_style": {
   "Parent": "library1_Courses",
@@ -589,6 +786,137 @@ window.moduloBuild.definitions = {
   "Name": "style",
   "DefinitionName": "library1_Courses_style",
   "Source": "http://127.0.0.1:6627/static/libraries/shop/Courses.css"
+ },
+ "library1_Courses_staticdata": {
+  "Parent": "library1_Courses",
+  "DefName": null,
+  "Type": "StaticData",
+  "DefLoaders": [
+   "DefinedAs",
+   "DataType",
+   "Src"
+  ],
+  "DefBuilders": [
+   "ContentCSV",
+   "ContentTXT",
+   "ContentJSON",
+   "ContentJS"
+  ],
+  "DefFinalizers": [
+   "Code",
+   "RequireData"
+  ],
+  "Content": "/* JSON data, but evaluated as a JS expression */\n[\n    {\n        title: 'Foundations',\n        subtitle: 'Web Design: Intro to HTML and CSS',\n        course: 'prep',\n        content: 'Learn the basics of HTML and CSS to create cool, useful websites from scratch.',\n        img: 'computer-g0e7058b72_1280.jpg',\n        imgalt: 'A computer being programmed',\n        imgfg: 'white',\n    },\n\n    {\n        title: 'Foundations',\n        subtitle: 'Web Design: Components & Frameworks',\n        course: 'prep',\n        content: 'Learn design trends, how to use frameworks including Tailwind and Netlify, and how to re-use layouts and components.',\n        img: 'hd-wallpaper-g721518917_1280.jpg',\n        imgalt: 'Illustration of rainbow going through monitor',\n        imgfg: 'white',\n    },\n\n    {\n        course: 'prep',\n        subtitle: 'Kickstart Prework',\n        img: 'plans-gb63d02c1d_1280.jpg',\n        content: `\n          Get acquainted to coding on your personal computer or a provided\n          Linux Lab account. Prep your computer, get familiar with tech terms,\n          and learn markdown.\n        `,\n    },\n\n    {\n        course: 'fundamentals',\n        img: 'laptop-g4d7844033_1280.png',\n        subtitle: 'Static Sites & Bootstrap',\n        content: `Peel back the technologies of the web in this whirlwind tour\n        of HTML, CSS, Dev Tools, column-based layouts, responsive design and\n        Bootstrap 5`,\n    },\n\n    {\n        course: 'fundamentals',\n        img: 'apple-ga7d81315e_1280.png',\n        subtitle: 'Automation: Bash, Git, and Python Scripts',\n        content: `Learn how to use Git to keep your code safe under version control.\n        Learn effective terminal use, and how to write Bash and Python scripts\n        to replace tedious tasks.`,\n    },\n\n    {\n        course: 'fundamentals',\n        img: 'background-g8ee7d113b_1280.jpg',\n        subtitle: 'Computer Programming with Python',\n        content: `Begin a classic introduction to backend programming with\n        Python, learning core data types and control-flow structures. Go deeper\n        with OOP, Pipenv, and Jinja templating.`,\n    },\n\n    {\n        course: 'backend',\n        subtitle: 'Intro to Networking with Python',\n        img: 'background-ged739cdbf_1280.jpg',\n        imgfg: 'white',\n        content: `Learn about the Internet, networking, and server-side\n        programming. You will use web APIs, implement HTTP over TCP/IP, and\n        finally basic request routing and web apps.`,\n    },\n\n    {\n        course: 'backend',\n        subtitle: 'Practical Django',\n        imgalt: 'Cube in a world of cubes',\n        img: 'cubes-g21a82afce_1280.jpg',\n        imgfg: 'white',\n        content: `Learn the best practices from a 10+ year Django industry\n        veteran: MVC, CRUD, forms, urls, users, admin, models, data cardinality\n        (eg Many-To-Many), unit testing, and much more.`,\n    },\n\n    {\n        course: 'backend',\n        img: 'server-g6892d162b_1280.jpg',\n        imgfg: 'white',\n        subtitle: 'Intro to Databases with Postgres SQL',\n        content: `Learn SQL basics on a Postgres DB, before diving into JOINs,\n        constraints, query analysis, indexes and optimization, trigram-based\n        full-text search, geodata, and more.`,\n    },\n\n    {\n        course: 'frontend',\n        imgfg: 'white',\n        img: 'retro-g526726a00_1280.jpg',\n        subtitle: 'Modern Web: Vanilla JS',\n        content: `Learn modern JavaScript, including let, const, iterators, and\n        DOM manipulation. Dive into tricky CSS concepts like ancestor\n        positioning and pseudo-elements.`\n    },\n\n    {\n        course: 'frontend',\n        img: 'colorful-g427212bf2_1280.jpg',\n        imgfg: 'white',\n        subtitle: 'Thinking in React',\n        content: `In this hooks-based React course, you go beyond just learning\n        the JSX syntax, and practice \"thinking in React\" with data-flow,\n        lifting state, and more.`,\n    },\n\n    {\n        course: 'frontend',\n        imgfg: 'white',\n        img: 'wallpaper-gbaac742b2_1280.jpg',\n        subtitle: 'Full Stack JS: MERN, Redux, and Routing',\n        content: `Take your React JS skills to the full stack by learning\n        MongoDB, Express.JS, and Node.js. Learn Redux for state management, and\n        Routing for multi-page apps.`,\n    },\n\n    {\n        course: 'career',\n        img: 'people-g923420017_1280.jpg',\n        imgfg: 'white',\n        subtitle: 'Kickstart Career',\n        content: `Redo your resume, polish your profile, and hone your\n        networking skills. Practice interviews and develop a \"elevator pitch\"\n        to market yourself for your next job.`,\n    },\n\n    {\n        course: 'career',\n        subtitle: 'Algorithms: Computer Science for Job Seekers',\n        img: 'fractal-gdd9943fe4_1280.jpg',\n        imgfg: 'white',\n        content: `A CS course hyper-focused on whiteboard interviews. Learn Big\n        O, time complexity analysis, sorting, dynamic programming, recursion,\n        coding puzzle techniques, and more.`,\n    },\n\n    {\n        course: 'career',\n        img: 'drawing-g538254e05_1280.jpg',\n        subtitle: 'Career Capstone',\n        content: `Use a 5-milestone process to build a software product from\n        specs to launch. Learn how tech roles interlock, including agile\n        Product Management and DevOps.`,\n    },\n]\n\n/*\n\n DEAD CODE\n\n\n    {\n        course: 'fundamentals',\n        subtitle: 'Modular Python',\n    },\n\n    {\n        title: 'Backend: Django and Postgres' ,\n        time: '4-12 weeks',\n        content: 'Web application programming with Python 3, Django, and Postgres SQL',\n        updated: 'Updated for Django&nbsp;4+',\n        description: [\n            'Build a full-stack web application with Python / Django',\n            'Round out your backend knowledge with PosgreSQL',\n            'Implement a HTTP web server in Python',\n        ],\n    },\n\n    {\n        title: \"Frontend: React and Mern\",\n        time: '5-15 weeks',\n        content: 'Cutting-edge frontend web development with modern vanilla JavaScript and React.js JSX',\n        updated: 'Updated for React.js Hooks and ES6+',\n        description: [\n            'Develop and launch a data visualization React charting component',\n            'Modernized frontend with CSS grid and vanilla JS',\n            'A crash course in MERN for full-stack JS Single Page Apps',\n        ],\n    },\n\n    {\n        title: \"Algorithms: Computer Science for Job Seekers\",\n        time: '2-6 weeks',\n        content: 'Tech career development and fundamentals of algorithms',\n        description: [\n            'Learn techniques on how to make your dream career in tech a reality',\n            'Redo your resume, polish your online profile, and hone your networking skills',\n            'Learn CS concepts and problem solving techniques to beat interviews',\n        ],\n    },\n\n    {\n        title: \"Career Capstone\",\n        time: '2-6 weeks',\n        content: 'Tech career development and fundamentals of algorithms',\n        description: [\n            'Learn techniques on how to make your dream career in tech a reality',\n            'Redo your resume, polish your online profile, and hone your networking skills',\n            'Learn CS concepts and problem solving techniques to beat interviews',\n        ],\n    },\n        description: [\n            'Great for both beginners, and pros looking to brush up',\n            'Indulge your creative side! Create your own e-commerce store or business page.',\n            'Learn to integrate with Etsy, Shopify, YouTube, Soundcloud, Bandcamp, Google Maps and others.',\n            'Build band pages, artist profiles, personal pages, artistic blogs and personal writing spots.',\n            'Learn HTML, CSS',\n            'Learn how to use design principles to create designs from scratch',\n        ],\n\n        description: [\n            'Great for both beginners, and pros looking to brush up',\n            'Indulge your creative side! Create your own e-commerce store or business page.',\n            'Learn to integrate with Etsy, Shopify, YouTube, Soundcloud, Bandcamp, Google Maps and others.',\n            'Build band pages, artist profiles, personal pages, artistic blogs and personal writing spots.',\n            'Learn HTML, CSS',\n            'Learn how to use design principles to create designs from scratch',\n        ],\n\n*/\n",
+  "Name": "staticdata",
+  "DefinitionName": "library1_Courses_staticdata",
+  "Source": "http://127.0.0.1:6627/static/libraries/shop/Courses.js",
+  "data": [
+   {
+    "title": "Foundations",
+    "subtitle": "Web Design: Intro to HTML and CSS",
+    "course": "prep",
+    "content": "Learn the basics of HTML and CSS to create cool, useful websites from scratch.",
+    "img": "computer-g0e7058b72_1280.jpg",
+    "imgalt": "A computer being programmed",
+    "imgfg": "white"
+   },
+   {
+    "title": "Foundations",
+    "subtitle": "Web Design: Components & Frameworks",
+    "course": "prep",
+    "content": "Learn design trends, how to use frameworks including Tailwind and Netlify, and how to re-use layouts and components.",
+    "img": "hd-wallpaper-g721518917_1280.jpg",
+    "imgalt": "Illustration of rainbow going through monitor",
+    "imgfg": "white"
+   },
+   {
+    "course": "prep",
+    "subtitle": "Kickstart Prework",
+    "img": "plans-gb63d02c1d_1280.jpg",
+    "content": "\n          Get acquainted to coding on your personal computer or a provided\n          Linux Lab account. Prep your computer, get familiar with tech terms,\n          and learn markdown.\n        "
+   },
+   {
+    "course": "fundamentals",
+    "img": "laptop-g4d7844033_1280.png",
+    "subtitle": "Static Sites & Bootstrap",
+    "content": "Peel back the technologies of the web in this whirlwind tour\n        of HTML, CSS, Dev Tools, column-based layouts, responsive design and\n        Bootstrap 5"
+   },
+   {
+    "course": "fundamentals",
+    "img": "apple-ga7d81315e_1280.png",
+    "subtitle": "Automation: Bash, Git, and Python Scripts",
+    "content": "Learn how to use Git to keep your code safe under version control.\n        Learn effective terminal use, and how to write Bash and Python scripts\n        to replace tedious tasks."
+   },
+   {
+    "course": "fundamentals",
+    "img": "background-g8ee7d113b_1280.jpg",
+    "subtitle": "Computer Programming with Python",
+    "content": "Begin a classic introduction to backend programming with\n        Python, learning core data types and control-flow structures. Go deeper\n        with OOP, Pipenv, and Jinja templating."
+   },
+   {
+    "course": "backend",
+    "subtitle": "Intro to Networking with Python",
+    "img": "background-ged739cdbf_1280.jpg",
+    "imgfg": "white",
+    "content": "Learn about the Internet, networking, and server-side\n        programming. You will use web APIs, implement HTTP over TCP/IP, and\n        finally basic request routing and web apps."
+   },
+   {
+    "course": "backend",
+    "subtitle": "Practical Django",
+    "imgalt": "Cube in a world of cubes",
+    "img": "cubes-g21a82afce_1280.jpg",
+    "imgfg": "white",
+    "content": "Learn the best practices from a 10+ year Django industry\n        veteran: MVC, CRUD, forms, urls, users, admin, models, data cardinality\n        (eg Many-To-Many), unit testing, and much more."
+   },
+   {
+    "course": "backend",
+    "img": "server-g6892d162b_1280.jpg",
+    "imgfg": "white",
+    "subtitle": "Intro to Databases with Postgres SQL",
+    "content": "Learn SQL basics on a Postgres DB, before diving into JOINs,\n        constraints, query analysis, indexes and optimization, trigram-based\n        full-text search, geodata, and more."
+   },
+   {
+    "course": "frontend",
+    "imgfg": "white",
+    "img": "retro-g526726a00_1280.jpg",
+    "subtitle": "Modern Web: Vanilla JS",
+    "content": "Learn modern JavaScript, including let, const, iterators, and\n        DOM manipulation. Dive into tricky CSS concepts like ancestor\n        positioning and pseudo-elements."
+   },
+   {
+    "course": "frontend",
+    "img": "colorful-g427212bf2_1280.jpg",
+    "imgfg": "white",
+    "subtitle": "Thinking in React",
+    "content": "In this hooks-based React course, you go beyond just learning\n        the JSX syntax, and practice \"thinking in React\" with data-flow,\n        lifting state, and more."
+   },
+   {
+    "course": "frontend",
+    "imgfg": "white",
+    "img": "wallpaper-gbaac742b2_1280.jpg",
+    "subtitle": "Full Stack JS: MERN, Redux, and Routing",
+    "content": "Take your React JS skills to the full stack by learning\n        MongoDB, Express.JS, and Node.js. Learn Redux for state management, and\n        Routing for multi-page apps."
+   },
+   {
+    "course": "career",
+    "img": "people-g923420017_1280.jpg",
+    "imgfg": "white",
+    "subtitle": "Kickstart Career",
+    "content": "Redo your resume, polish your profile, and hone your\n        networking skills. Practice interviews and develop a \"elevator pitch\"\n        to market yourself for your next job."
+   },
+   {
+    "course": "career",
+    "subtitle": "Algorithms: Computer Science for Job Seekers",
+    "img": "fractal-gdd9943fe4_1280.jpg",
+    "imgfg": "white",
+    "content": "A CS course hyper-focused on whiteboard interviews. Learn Big\n        O, time complexity analysis, sorting, dynamic programming, recursion,\n        coding puzzle techniques, and more."
+   },
+   {
+    "course": "career",
+    "img": "drawing-g538254e05_1280.jpg",
+    "subtitle": "Career Capstone",
+    "content": "Use a 5-milestone process to build a software product from\n        specs to launch. Learn how tech roles interlock, including agile\n        Product Management and DevOps."
+   }
+  ]
  },
  "library1_Courses_script": {
   "Parent": "library1_Courses",

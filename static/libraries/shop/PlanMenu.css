@@ -1,0 +1,297 @@
+:host {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+p.most-popular {
+    background: var(--sunshine);
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white;
+    font-size: 1.2rem;
+    height: 40px;
+    text-align: center;
+    width: calc(100% - 20px);
+    position: absolute;
+    top: -60px;
+    border-radius: 100px 100px 0 0;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*box-shadow: 0 -1px 5px var(--sunshine);*/
+    box-shadow: 0 -1px 5px #00000033;
+}
+
+article {
+    border: 1px solid var(--bluebird);
+    border-radius: 5px;
+    position: relative;
+    min-height: 200px;
+    box-shadow: 0 5px 5px #00000033;
+    text-align: center;
+    transition: transform 0.3s, background 0.2s;
+    transform: scale(1.0);
+    /*background: #ffffee;*/
+    background: white;
+}
+
+
+article:hover {
+    /*background: white;*/
+    background: #ffffee;
+    transform: scale(1.1);
+    z-index: 12;
+}
+
+
+
+article:hover .buy-btn {
+    animation: 1.5s infinite alternate glowing;
+    /*
+    box-shadow:
+         5px  5px 10px #ffffff00,
+         5px -5px 10px #ffffff00,
+        -5px  5px 10px #ffffff00,
+        -5px -5px 10px #ffffff00;
+    */
+}
+
+.buy-btn:hover {
+    text-shadow: 0 0 10px white;
+}
+
+
+.buy-btn:active {
+    text-shadow: 0 0 10px #00000022;
+    background: linear-gradient(var(--yellow2), var(--yellow1));
+}
+
+
+article.bootcamp {
+    background: linear-gradient(WhiteSmoke, #ddd);
+}
+article.bootcamp h3 {
+    color: WhiteSmoke;
+}
+
+.h3-wrapper {
+    /*border: 1px solid var(--bluebird);*/
+    /*border: 1px solid var(--golden);*/
+    border: 1px solid #00000033;
+    border-radius: 5px;
+    background: linear-gradient(var(--sunshine), white, white, white, var(--golden));
+}
+
+h3 {
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin: 0;
+    background: var(--bluebird);
+    color: white;
+    box-shadow: 0 1px 10px inset var(--cerulean);
+    text-shadow: 0 0 10px var(--cerulean);
+    font-weight: 800;
+}
+
+.text--hlinperson {
+    background: var(--sunshine);
+}
+
+/* specific text formattings */
+
+.online {
+    font-style: italic;
+    margin: 0;
+    margin-top: 2px;
+    font-size: 0.87rem;
+}
+
+.lectures {
+    border-top: 1px solid #00000044;
+    border-bottom: 1px solid #00000044;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.crossed-price {
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 0.1;
+    color: #00000066;
+    text-decoration: line-through;
+    font-family: sans-serif;
+}
+
+.big-price {
+    font-weight: 800;
+    font-size: 3rem;
+    font-family: sans-serif;
+    border-bottom: 1px solid #00000044;
+}
+
+.big-price::before {
+    content: '$';
+    font-size: 2.2rem;
+    color: #000000aa;
+    margin-right: 5px;
+}
+
+.length {
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.buy-btn {
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: block;
+    margin: 10px;
+    /*
+    background: var(--bluebird);
+    color: white;
+    box-shadow: 0 1px 10px inset var(--cerulean);
+    text-shadow: 0 0 10px var(--cerulean);
+    box-shadow: 0 1px 10px inset var(--sunshine);
+    */
+    text-shadow: 0 0 10px var(--sunshine);
+    font-weight: 800;
+    /*border: 1px solid var(--bluebird);*/
+    border: 1px solid var(--sunshine);
+    background: linear-gradient(var(--yellow1), var(--yellow2));
+    color: black;
+    transition: text-shadow 0.2s, background 0.2s;
+}
+
+
+.buy--inquire {
+    background: #00000044;
+    box-shadow: none !important;
+    text-shadow: none;
+    border: none;
+}
+
+.h3-wrapper.h3-wrapper--inquire {
+    background: none;
+}
+.h3-wrapper.h3-wrapper--inquire h3 {
+    background: #aaa;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+}
+
+.summary {
+    height: 150px;
+    padding: 5px;
+    margin-left: 10px;
+    padding-top: 1px;
+    text-align: left;
+    font-family: serif;
+    border-bottom: 1px solid #00000044;
+}
+
+.stars {
+    color: var(--sunshine);
+    font-family: serif;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+    font-size: 2.0rem;
+    line-height: 0.5;
+}
+
+.stars span {
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
+
+.inquire {
+    font-size: 0.8rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+    :host {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 576px) {
+    :host {
+        display: block;
+    }
+}
+
+
+@keyframes glowing {
+    from {
+        box-shadow:
+            5px  5px 10px #ffffff00,
+            5px -5px 10px #ffffff00,
+            -5px  5px 10px #ffffff00,
+            -5px -5px 10px #ffffff00;
+    }
+    5% {
+        box-shadow:
+            5px  5px 10px var(--yellow1),
+            5px -5px 10px var(--sunshine30),
+            -5px  5px 10px var(--golden30),
+            -5px -5px 10px var(--yellow2);
+    }
+    15% {
+        box-shadow:
+            5px  5px 10px var(--yellow2),
+            5px -5px 10px var(--golden30),
+            -5px  5px 10px var(--yellow1),
+            -5px -5px 10px var(--sunshine30);
+    }
+    25% {
+        box-shadow:
+            5px  5px 10px var(--golden30),
+            5px -5px 100px var(--golden30),
+            -5px  5px 10px var(--sunshine30),
+            -5px -5px 100px var(--sunshine30);
+    }
+    50% {
+        box-shadow:
+            85px 85px 10px var(--golden30),
+            405px 5px 10px var(--golden30),
+            5px  85px 10px var(--golden30),
+            500px 500px 10px var(--golden30);
+    }
+    75% {
+        box-shadow:
+            -50px  -50px 1px 10px var(--yellow2),
+            -50px -50px 1px 10px var(--yellow2),
+            -50px  50px 3px 10px var(--yellow2),
+            -500px -50px 3px 10px var(--yellow2);
+    }
+    85% {
+        box-shadow:
+            -5px  -5px 1px 10px var(--yellow1),
+            -5px -25px 1px 100px var(--golden30),
+            -25px  -5px 1px 100px var(--yellow2),
+            -25px -25px 1px 10px var(--sunshine30);
+    }
+    to {
+        box-shadow:
+            5px  5px 10px var(--sunshine30),
+            5px -5px 10px var(--sunshine30),
+            -5px  5px 10px var(--sunshine30),
+            -5px -5px 10px var(--sunshine30);
+    }
+}
+
