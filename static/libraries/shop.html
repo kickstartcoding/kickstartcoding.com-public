@@ -19,6 +19,9 @@
 </Component>
 
 <Component name="Courses">
+    <Props
+        topthree
+    ></Props>
     <Template
         -src="/static/libraries/shop/Courses.html"
     ></Template>
@@ -34,6 +37,7 @@
     <State
         selected=""
     ></State>
+
     <Script>
         const courses = [
             {
@@ -64,13 +68,16 @@
         ];
 
         function selectCourse(slug) {
-            console.log('state.selected=', slug);
             state.selected = slug;
         }
 
         function prepareCallback() {
             let segments = staticdata;
             let visibleSegments = staticdata;
+            if (props.topthree) {
+                const allowed = 'Thinking in React|Practical Django|Web Design: Intro to HTML and CSS';
+                visibleSegments = staticdata.filter(seg => allowed.toLowerCase().includes(seg.subtitle.toLowerCase()));
+            }
             if (state.selected) {
                 visibleSegments = staticdata.filter(seg => seg.course.toLowerCase() === state.selected);
             }

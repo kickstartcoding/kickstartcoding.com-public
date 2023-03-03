@@ -74,8 +74,8 @@
         imgalt: 'Cube in a world of cubes',
         img: 'cubes-g21a82afce_1280.jpg',
         imgfg: 'white',
-        content: `Learn the best practices from a 10+ year Django industry
-        veteran: MVC, CRUD, forms, urls, users, admin, models, data cardinality
+        content: `Learn the best practices from an experienced Django
+        developer: MVC, CRUD, forms, urls, users, admin, models, data cardinality
         (eg Many-To-Many), unit testing, and much more.`,
     },
 

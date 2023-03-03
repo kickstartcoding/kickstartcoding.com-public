@@ -26,20 +26,45 @@
                     },
                     {
                         title: "Courses",
-                        file: "courses.html",
+                        file: "courses/",
                     },
                     {
                         title: "Outreach",
-                        file: "outreach.html",
+                        file: "outreach/",
                     },
                     {
                         title: "Results",
-                        file: "results.html",
+                        file: "results/",
                     },
                 ],
             };
         }
     </Script>
+</Component>
+
+
+<Component name="FeaturedTestimonials">
+    <Template -src="/static/libraries/layout/Testimonials.html"></Template>
+    <Style -src="/static/libraries/layout/Testimonials.css"></Style>
+    <script StaticData -src="/static/libraries/layout/Testimonials.js">
+        .filter(
+            item => item.featured
+        )
+    </script>
+</Component>
+
+
+<Component name="Testimonials">
+    <Template
+        -src="/static/libraries/layout/Testimonials.html"
+    ></Template>
+    <Style
+        -src="/static/libraries/layout/Testimonials.css"
+    ></Style>
+    <State
+        selected
+    ></State>
+    <script StaticData -src="/static/libraries/layout/Testimonials.js"></script>
 </Component>
 
 

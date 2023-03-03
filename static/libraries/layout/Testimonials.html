@@ -1,0 +1,47 @@
+<main>
+    {% for testimonial in staticdata %}
+    {#<div class="sliding-box {% if testimonial.selected == state.selected %}sliding-box--selected{% endif %}">#}
+    <div class="sliding-box">
+        <article>
+            <label for="testimonial-{{ testimonial.name }}">
+                <img src="/static/images/testimonials/{{ testimonial.img }}" alt="Portrait photograph of {{ testimonial.name }}">
+                {% if testimonial.featured %}
+                    <p class="featured">{{ testimonial.featured }}</p>
+                    <p class="name">{{ testimonial.name }}</p>
+                    <p class="location">{{ testimonial.location }}</p>
+                {% endif %}
+            </label>
+            {% comment %}
+            <div class="box-title">
+                <span class="hidden-xs">
+                    <h4>{{ testimonial.name }} <span>{{ testimonial.location }}</span></h4>
+                    <h5>{{ testimonial.profession }}</h5>
+                </span>
+                <span class="visible-xs">
+                    <h4>{{ testimonial.name }}</h4>
+                    <h5>{{ testimonial.location }}</h5>
+                </span>
+            </div>
+            <div class="text-box">
+                <div class="text-content">
+                    <span class="visible-xs">
+                        <h5>{{ testimonial.profession }}</h5>
+                    </span>
+                    {% if testimonial.pullquote %}
+                        <p class="pullquote">&ldquo;{{ testimonial.pullquote }}&rdquo;</p>
+                    {% endif %}
+                    {% if testimonial.featured_text %}
+                        <p>&ldquo;{{ testimonial.featured_text|safe }}&rdquo;</p>
+                    {% else %}
+                        <p>&ldquo;{{ testimonial.text|safe }}&rdquo;</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endcomment %}
+        </article>
+    </div>
+    {% if testimonial.featured %}
+        <input type="radio" style="display:none" name="testimonial-{{ testimonial.name }}" />
+    {% endif %}
+    {% endfor %}
+</main>

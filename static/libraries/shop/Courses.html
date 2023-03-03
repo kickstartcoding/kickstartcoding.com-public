@@ -1,19 +1,24 @@
-<h1>Courses</h1>
-<nav>
-    <ul>
-        {% for course in script.courses %}
-            <li>
-                <button @click:=script.selectCourse payload="{{ course.title|lower }}">
-                    <span class="step">{{ course.step }}</span>
-                    <span class="label">{{ course.title }}</span>
-                    <span class="weeks">{{ course.weeks }}</span>
-                </button>
-            </li>
-        {% endfor %}
-    </ul>
-</nav>
+{% if not props.topthree %}
+    <h1>Courses</h1>
+    <p>Our curriculum consists of 5 multi-segmented courses, which we use to
+    create a custom paced full stack curriculum for each student in our
+    program.</p>
+    <nav>
+        <ul>
+            {% for course in script.courses %}
+                <li>
+                    <button @click:=script.selectCourse payload="{{ course.title|lower }}">
+                        <span class="step">{{ course.step }}</span>
+                        <span class="label">{{ course.title }}</span>
+                        <span class="weeks">{{ course.weeks }}</span>
+                    </button>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
 
-<h1>Course Segments</h1>
+    <h1>Course Segments</h1>
+{% endif %}
 
 <main>
 

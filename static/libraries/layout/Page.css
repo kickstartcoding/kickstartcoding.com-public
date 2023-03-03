@@ -15,7 +15,7 @@
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     /*
     background-image: 
       radial-gradient(#ffffffaa, #ffffffaa),
@@ -139,21 +139,26 @@ body {
     text-decoration: none;
     min-width: 220px;
     margin-left: 0;
+    margin-top: 10px;
     text-align: center;
     transition: box-shadow 0.17s;
     box-shadow: 
-        0 -100px 5px 100px inset #ffffff11,
-        0  100px 5px 100px inset #ffffff11;
+        0 -100px 5px 0     #ffffff11,
+        0  100px 5px inset #ffffff11;
 }
-.Page-navLink:hover {
+
+.Page-navLink:not(.Page-navLink--selected):hover {
     box-shadow: 
-        0 -5px 0 0 inset var(--bluebird),
-        0 5px 0 0 inset var(--bluebird);
+        0 -20px 0 0         var(--cerulean),
+        0 -3px  0 20px   inset var(--bluebird);
 }
 
 .Page-navLink--selected {
     background-color: var(--bluebird);
-    box-shadow: 0 -5px 10px 0 inset #00000014;
+    box-shadow: 
+        0 -20px 20px 0 var(--bluebird),
+        0 -28px 0    0 var(--cerulean),
+        0 -5px  10px 0 inset #00000014;
     border-radius: 1px;
     /*color: white;*/
     /*background-color: var(--cerulean);*/
@@ -161,17 +166,15 @@ body {
     /*border-color: var(--sunshine);*/
 }
 
-.Page-navLink:hover {
-    /*border-color: var(--sunshine);*/
-}
-
-.Page-navLink--selected {
-}
-
 .Page-footer {
     height: 80px;
     text-align: center;
     padding-top: 30px
+}
+
+.u--xwide {
+    margin-left: -8%;
+    width: 116%;
 }
 
 .hero-inset-grid {
@@ -309,6 +312,43 @@ body {
     max-width: 200px;
 }
 
+.big-well-card {
+    border: 3px solid var(--cerulean);
+    border-radius: 10px;
+    padding: 10px;
+    background: WhiteSmoke;
+    box-shadow: 0 5px 5px #00000033;
+}
+
+.small-well-card {
+    border: 3px solid var(--cerulean);
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 0;
+    background: WhiteSmoke;
+    box-shadow: 0 5px 5px #00000033;
+    width: 180px;
+}
+
+.small-well-card-wrapper {
+    display: flex;
+}
+
+.small-well-card-wrapper ol {
+    margin: 0;
+    padding: 0;
+}
+.small-well-card-wrapper li {
+    list-style: '> ';
+    margin-left: 13px;
+    margin-right: 2px;
+    padding: 0;
+}
+
+h1 {
+    clear: both;
+}
+
 
 @media (max-width: 1440px) {
     .Page-nav {
@@ -326,6 +366,8 @@ body {
     .Page-navLink {
         font-size: 1.5rem;
         min-width: 170px;
+        margin-left: 0;
+        margin-top: 1px;
     }
 
     .right-links {
@@ -375,6 +417,17 @@ body {
     .Page-container .hero-text-top {
         padding: 0;
         margin-top: -60px;
+    }
+
+    .Page-navLink--selected {
+        background-color: var(--bluebird);
+        box-shadow: 0 -5px  10px 0 inset #00000014;
+        border-radius: 1px;
+    }
+
+    .u--xwide {
+        margin-left: 0;
+        width: 100%;
     }
 }
 
