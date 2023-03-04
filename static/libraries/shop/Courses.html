@@ -29,6 +29,7 @@
     </aside>
 {% endif %}
 
+
 {% for seg in script.visibleSegments %}
     <article title="{{ seg.subtitle }}">
         <div class="course-wrapper {% if state.selected %}course-wrapper--selected{% endif %}">
@@ -38,8 +39,7 @@
                 {% else %}
                     <h3>{{ seg.course|capfirst }}</h3>
                 {% endif %}
-                <div
-                  style="
+                <div style="
                       background-image: 
                           {% if seg.imgfg == 'white' %}
                             linear-gradient(to bottom left, #11111155, #33333355),
@@ -56,18 +56,83 @@
                 {% endif %}
                 </div>
             </div>
+            {% if seg.free %}
+                <p class="free" title="This course is free. Start immediately!">FREE!</p>
+            {% endif %}
             {% if seg.content %}
                 <p>{{ seg.content }}</p>
             {% endif %}
             {% if seg.updated %}
                 <p>{{ seg.updated }}</p>
             {% endif %}
-            {% comment %}
-            {% if seg.description %}
-                <p>{{ seg.description }}</p>
+            <div class="bottom-wrapper">
+            {% if seg.skill %}
+                <p class="skill skill-level{{ seg.skill }}">
+                    {#{% if seg.skill == 1 %}  ◧ □ □    Warm-Up#}
+                    {% if seg.skill == 1 %}  □ □ □    <br />Warm-Up
+                    {% elif seg.skill == 2 %}▣ □ □    <br />Beginner
+                    {% elif seg.skill == 3 %}▣ ▣ □    <br />Intermediate
+                    {% elif seg.skill == 4 %}▣ ▣ ▣    <br />Advanced
+                    {% endif %}
+                </p>
             {% endif %}
-            {% endcomment %}
+            <div class="buy-button-wrapper">
+                {% if seg.modules %}
+                    <strong class="modules" title="{{ seg.modules|length }} modules">{{ seg.modules|length }} <i class="fa fa-cubes" aria-hidden="true"></i></strong>
+                    <br />
+                {% endif %}
+                {% if seg.project %}
+                    <strong class="project-tag" title="Project based learning: {{ seg.project }}"><i class="fa fa-laptop" aria-hidden="true"></i> PROJECT</strong>
+                {% endif %}
+                {% if not seg.url %}
+                    {# Disabling for seg.url since it makes it harder to click #}
+                    <div class="included-explainer">
+                        {% if seg.project %}
+                            <strong>Project based learning:</strong> {{ seg.project }}<br />
+                        {% endif %}
+                        {% if seg.modules %}
+                            <strong>Module Count:</strong> {{ seg.modules|length }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+
+            {% if seg.url %}
+                <p class="url">
+                    <a href="{{ seg.url }}" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
+                        BEGIN&nbsp;&raquo;
+                    </a>
+                    {% if props.topthree %}
+                        <div class="sticky-note">
+                            <div class="sticky-note-arrow">⬆</div>
+                            <strong>Free Course for Beginners!</strong>
+                        </div>
+                    {% endif %}
+                </p>
+            {% elif props.topthree %}
+                {#<div class="buy-button-wrapper"> </div>#}
+            {% else %}
+                <div class="buy-button-wrapper">
+                    <a href="/courses/#plans" class="getbtn">
+                    GET&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                    <div class="included-explainer">
+                        <strong style="font-size: 1.5rem;">$149</strong>
+                        <em>BUNDLE</em>
+                        <p>Video Course &amp;<br />Group Tutoring Bundle</p>
+                        <em>&raquo; Lifetime Access to All Courses</em>
+                        <em>&raquo; 2 Months Video Help</em>
+                        <!--
+                        <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
+                          🛒&nbsp;GET&nbsp;&raquo;
+                        </a>
+                        -->
+                    </div>
+                </div>
+            {% endif %}
+            </div>
         </div>
     </article>
 {% endfor %}
+
 </main>

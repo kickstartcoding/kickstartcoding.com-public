@@ -2,6 +2,10 @@
     /*width: 100%;*/
 }
 
+p {
+    padding: 8px;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -21,15 +25,19 @@ article {
     padding-right: 20px;
     padding-bottom: 20px;
     position: relative;
+}
+
+/*
+article {
     transform: scale(1.0);
     transition: transform 0.3s;
 }
-
 
 article:hover {
     transform: scale(1.1);
     z-index: 12;
 }
+*/
 
 ul {
     display: grid;
@@ -98,11 +106,8 @@ nav button .weeks {
     border: 1px solid #00000033;
     border-radius: 20px;
     margin: 0;
-    min-height: 350px;
-}
-
-p {
-    padding: 10px;
+    /*min-height: 350px;*/
+    min-height: 400px;
 }
 
 .h3-wrapper {
@@ -160,6 +165,126 @@ aside {
     box-shadow: 5px 5px 10px inset #00000011;
 }
 
+.skill {
+    background: #999;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.free {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-size: 0.9rem;
+    background: var(--cerulean);
+    color: white;
+}
+
+.buy-button-wrapper {
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.buy-button-wrapper .getbtn {
+    padding: 5px;
+    display: inline-block;
+    background: var(--cerulean);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.buy-button-wrapper .getbtn:hover {
+    background: var(--bluebird);
+}
+
+.buy-button-wrapper .included-explainer {
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+}
+
+.buy-button-wrapper:hover .included-explainer {
+    visibility: visible;
+    opacity: 1.0;
+}
+
+.project-tag {
+    background: #777;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+
+.included-explainer {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    background: white;
+    padding: 10px;
+    width: 280px;
+    box-shadow: 0 5px 5px #00000033;
+    border: 1px solid #00000033;
+    border-radius: 50px 0 50px 50px;
+    z-index: 3;
+}
+
+.included-explainer em {
+    display: inline-block;
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+}
+
+.bottom-wrapper > * {
+    align-self: baseline;
+}
+
+.bottom-wrapper > :last-child {
+    margin-right: 8px; /* need adjust */
+}
+
+:host {
+    --arrow-height: 40px;
+    --arrow-height-outer: 50px;
+}
+
+.sticky-note {
+    width: 120%;
+    font-size: 1.2rem;
+    position: absolute;
+    background: var(--yellow2);
+    padding: 10px;
+    left: -42px;
+    bottom: calc(5px - var(--arrow-height-outer));
+    z-index: 4;
+    padding-left: 45px;
+}
+.sticky-note-arrow {
+    position: absolute;
+    top: calc(0px - var(--arrow-height));
+    right: 80px;
+    font-size: var(--arrow-height-outer);
+    color: var(--yellow2);
+}
 
 @media (max-width: 992px) {
     article {
@@ -189,6 +314,9 @@ aside {
     }
     article {
         width: 100%;
+    }
+    .bottom-wrapper {
+        position: static;
     }
 }
 
