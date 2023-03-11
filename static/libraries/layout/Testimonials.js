@@ -5,11 +5,9 @@
         location: 'Antioch, California',
         profession: 'Software Engineer @ Rooster Grin Media',
         linkedin: 'nicolas-wyatt-miller',
-        pullquote: `
-            The custom paced structure was possibly the most vital component to
+        pullquote: `The custom paced structure was possibly the most vital component to
             my success [...] this setup allowed me to pace my progress and
-            uphold my life's balance in the process.
-        `,
+            uphold my life's balance in the process.`,
         text: `
             <strong>It sounds cheesy, but Kickstart Coding gave me the
             opportunity to make a career shift that I never thought I would be
@@ -38,10 +36,8 @@
         profession: 'Software Engineer @ Amino',
         linkedin: 'anthonysifontes',
         featured: 'Software Engineer',
-        pullquote: `
-            I eventually received an offer to be a Software Engineer at an exciting
-            healthcare start-up, and only 11 weeks into the program.
-        `,
+        pullquote: `I eventually received an offer to be a Software Engineer at an exciting
+            healthcare start-up, and only 11 weeks into the program.`,
         text: `
             My career thus far had been in data analytics. I wanted to
             transition to a developer role and ultimately be able to create and
@@ -78,11 +74,9 @@
         profession: 'Data Engineer @ Lyft',
         featured: 'Data Engineer',
         linkedin: 'andrew-w-thornton',
-        pullquote: `
-            Using my newly acquired skills, I got a great new job as a Data
+        pullquote: `Using my newly acquired skills, I got a great new job as a Data
             Engineer just a couple of weeks after finishing the Kickstart Coding
-            course.
-        `,
+            course.`,
         text: `
             After spending years as a software project and product manager flirting
             with the idea of becoming a software engineer, I finally got up the
@@ -145,10 +139,8 @@
         profession: 'Platform Specialist @ Amplitude',
         linkedin: 'nicol-hawkins',
         featured_on_frontpage: true,
-        pullquote: `
-            Thanks to the skills I learned at Kickstart Coding, I was
-            able to market myself for entry-level positions in the tech industry.
-        `,
+        pullquote: `Thanks to the skills I learned at Kickstart Coding, I was
+            able to market myself for entry-level positions in the tech industry.`,
         featured_text: `
             When I started Kickstart Coding, I had very few programming skills and
             no prior work experience in tech. It was a huge leap for me and it
@@ -222,9 +214,7 @@
         location: 'San Francisco, California',
         profession: 'Knowledge Base Manager @ Synapse',
         linkedin: 'kylepollock',
-        pullquote: `
-            I got a job offer within 30 days of completing my 4 month summer cohort.
-        `,
+        pullquote: `I got a job offer within 30 days of completing my 4 month summer cohort.`,
         text: `
             I was looking for a place to learn Python, JavaScript, and how to work
             with APIs to increase my skills, and make myself more marketable as a
@@ -249,9 +239,7 @@
         location: 'Oakland, California',
         profession: 'Senior Software Test Engineer @ Dolby',
         linkedin: 'rudy-trubitt-43b2126',
-        pullquote: `
-            Kickstart Coding gave me the key skills I needed to advance my career.
-        `,
+        pullquote: `Kickstart Coding gave me the key skills I needed to advance my career.`,
         text: `
             <strong>I needed a career boost and Kickstart delivered.</strong>
             From the start, I was impressed by my interactions with the
@@ -276,10 +264,7 @@
         img: 'cindy.jpg',
         location: 'Oakland, California',
         profession: '',
-        pullquote: `
-            Kickstart Coding delivered on commitment to value, education, and
-            passion.
-        `,
+        pullquote: `Kickstart Coding delivered on commitment to value, education, and passion.`,
         text: `
             Kickstart Coding could not have been more aptly named and the
             schedule/format of the class could not have fit my needs better.
@@ -302,10 +287,8 @@
         location: 'Oakland, California',
         profession: 'Junior Frontend Developer @ GeoEx',
         linkedin: 'errin-mixon-2b289023',
-        pullquote: `
-            I couldn't have afforded the time or money to take a traditional
-            bootcamp. I came out the other end as a web developer – with a new job.
-        `,
+        pullquote: `I couldn't have afforded the time or money to take a traditional
+            bootcamp. I came out the other end as a web developer – with a new job.`,
         text: `
             I come from a zero-tech background. I wanted to build an app. Michael
             said he could teach me that, so I signed up.
@@ -336,10 +319,8 @@
         location: 'Madison, Wisconsin',
         profession: 'Web Developer @ Know How',
         linkedin: 'jeremy-johnson-80035395',
-        pullquote: `
-            The skills I learned in this course I use every day at my new job
-            as a web developer.
-        `,
+        pullquote: `The skills I learned in this course I use every day at my new job
+            as a web developer.`,
         text: `
             Out of high school I got a 2 year web programming degree at a local
             technical college. I applied and applied for programming jobs and

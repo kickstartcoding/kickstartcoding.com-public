@@ -114,7 +114,7 @@
         course: 'fundamentals',
         img: 'background-g8ee7d113b_1280.jpg',
         subtitle: 'Computer Programming with Python',
-        project: 'Python-based static site generator',
+        project: 'Python-based static site generator, bonus assignment includes computer-vision powered OCR and face detection image gallery',
         content: `Begin a classic introduction to backend programming with
         Python, learning core data types and control-flow structures. Go deeper
         with OOP, Pipenv, and Jinja templating.`,

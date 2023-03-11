@@ -7,6 +7,11 @@
                 <img src="/static/images/testimonials/{{ testimonial.img }}" alt="Portrait photograph of {{ testimonial.name }}">
                 {% if testimonial.featured %}
                     <p class="featured">{{ testimonial.featured }}</p>
+                {% endif %}
+                {% if testimonial.pullquote %}
+                    <p class="pullquote">&ldquo;{{ testimonial.pullquote }}&rdquo;</p>
+                {% endif %}
+                {% if testimonial.name %}
                     <p class="name">{{ testimonial.name }}</p>
                     <p class="location">{{ testimonial.location }}</p>
                 {% endif %}

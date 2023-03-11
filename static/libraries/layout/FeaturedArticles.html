@@ -1,0 +1,10 @@
+<main>
+    {% for article in state.articles %}
+        <article>
+            <img src="{{ article.image }}" />
+            <label>{{ article.title }}</label>
+        </article>
+    {% endfor %}
+</main>
+
+

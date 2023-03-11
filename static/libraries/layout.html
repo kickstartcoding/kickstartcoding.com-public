@@ -20,25 +20,25 @@
             return {
                 currentYear: (new Date()).getFullYear(),
                 navigation: [
-                    {
+                    /*{
                         title: "Start",
                         file: "index.html",
-                    },
+                    },*/
                     {
                         title: "Courses",
                         file: "courses/",
                     },
-                    /*{
-                        title: "Community",
-                        file: "community/",
-                    },*/
-                    {
-                        title: "Outreach",
-                        file: "outreach/",
-                    },
                     {
                         title: "Results",
                         file: "results/",
+                    },
+                    {
+                        title: "Learn",
+                        file: "index.html#learn",
+                    },
+                    {
+                        title: "Outreach",
+                        file: "outreach/",
                     },
                 ],
             };
@@ -68,7 +68,52 @@
     <State
         selected
     ></State>
-    <script StaticData -src="/static/libraries/layout/Testimonials.js"></script>
+    <script StaticData -src="/static/libraries/layout/Testimonials.js">
+        .map(
+            item => ({
+                ...item,
+                featured: null, // Blank out "featured" field for all Testimonials
+            })
+        )
+    </script>
 </Component>
 
+
+
+
+<Component name="FeaturedArticles">
+    <Template
+        -src="/static/libraries/layout/FeaturedArticles.html"
+    ></Template>
+    <State
+        articles:=[]
+    ></State>
+    <Script>
+        const hardcodedData = {"results": [{"url":
+        "https://kickstartcoding.com/learn/pro-tips/six-important-tips-learning-code/",
+        "title": "Six Important Tips for Learning to Code", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/55/01/55011557-4ecf-4ce1-8efe-81555d5180d4/neat-lg-30ca40811ecee7f931167680e6b0412b.jpg?AWSAccessKeyId=SQ2H24YZ2CVAWZIUNIC2&Signature=I8gFEnKJmZfY1bFG81cyiMJwKwY%3D&Expires=1678548551"},
+        {"url":
+        "https://kickstartcoding.com/learn/articles/building-debug-trainer-deskop-app-tauri/",
+        "title": "Building the Debug Trainer Deskop App with Tauri", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/44/f4/44f43d18-76fc-47d2-aae7-0756d395fda4/tauri_homepage.png?AWSAccessKeyId=SQ2H24YZ2CVAWZIUNIC2&Signature=598nX2P36FOUspHce9oA9uSKzeE%3D&Expires=1678548551"},
+        {"url":
+        "https://kickstartcoding.com/learn/articles/bootcamp-education-worth-it/",
+        "title": "Is a Bootcamp Education Worth the Cost?", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/cc/45/cc45281d-bef1-4ccc-ab0d-1da8fd1368e8/book-731199_1920.jpg?AWSAccessKeyId=SQ2H24YZ2CVAWZIUNIC2&Signature=ce%2BC4bBeUveSy%2F5Z3Ix%2F4UrVLdY%3D&Expires=1678548551"}]}
+        function initializedCallback() {
+            state.articles = hardcodedData.results;
+            /*
+            fetch("https://kickstartcoding.online/learn/api/featured/")
+              .then(response => response.json())
+              .then(data => {
+                    console.log('featured data');
+              });
+            */
+        }
+    </Script>
+    <Style
+        -src="/static/libraries/layout/FeaturedArticles.css"
+    ></Style>
+</Component>
 

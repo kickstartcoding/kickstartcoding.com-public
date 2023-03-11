@@ -377,6 +377,7 @@ body {
     padding: 10px;
     background: WhiteSmoke;
     box-shadow: 0 5px 5px #00000033;
+    position: relative;
 }
 
 .small-well-card {
@@ -387,6 +388,7 @@ body {
     background: WhiteSmoke;
     box-shadow: 0 5px 5px #00000033;
     width: 180px;
+    position: relative;
 }
 
 .small-well-card-wrapper {
@@ -402,6 +404,22 @@ body {
     margin-left: 13px;
     margin-right: 2px;
     padding: 0;
+}
+
+.small-well-card-wrapper .Page-navLink {
+    min-width: 100px !important;
+    white-space: nowrap;
+}
+
+.small-well-card-wrapper .Page-navLink::before,
+.big-well-card  .Page-navLink::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 h1 {
@@ -504,6 +522,9 @@ h1 {
         display: block; /* Ensure all layouts go to static at this point */
     }
     .u--layout { /* Generic layout element - flex -> grid -> static */
+        display: block;
+    }
+    .small-well-card-wrapper {
         display: block;
     }
 }
