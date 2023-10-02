@@ -1,10 +1,24 @@
-<!DOCTYPE HTML><html><head>
+<!DOCTYPE html><html><head>
 
-<title>Kickstart Courses</title><meta charset="utf8"><link rel="stylesheet" href="/_modulo/modulo-build-xxcdsbq4.css" /></head><body>
+<title>Kickstart Courses</title><meta charset="utf8"><meta name="title" content="Kickstart Courses | Kickstart Coding"><meta name="description" content="Learn to code with our one-on-one bootcamp program"><meta name="keywords" content="bootcamp, python, learn to code, free coding, coding lessons. online bootcamp, tutoring, computer science, programming, javascript, react, coding school, coding academy"><meta name="robots" content="index, follow"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="language" content="English"><meta name="revisit-after" content="5 days"><link rel="stylesheet" href="/_modulo/modulo-build-x169munl.css">
+</head><body id="">
+    
+    
+
     
     
     
     
+    
+    
+    
+    
+
+    
+    
+    
+    
+
     
 
 
@@ -23,7 +37,7 @@
                 </li>
             
                 <li>
-                    <a href="/results/#c" title="Results" class="
+                    <a href="/results/" title="Results" class="
                             Page-navLink
                             
                         ">
@@ -32,7 +46,7 @@
                 </li>
             
                 <li>
-                    <a href="/index.html#learn#c" title="Learn" class="
+                    <a href="/learn/" title="Learn" class="
                             Page-navLink
                             
                         ">
@@ -41,7 +55,7 @@
                 </li>
             
                 <li>
-                    <a href="/outreach/#c" title="Outreach" class="
+                    <a href="/outreach/" title="Outreach" class="
                             Page-navLink
                             
                         ">
@@ -61,18 +75,32 @@
 
     <a name="c"></a> <!-- c = content -->
     
-        <div class="Page-container layout-container" style="background: WhiteSmoke">
-            <h1 class="hero-text-top layout-container" style="text-align: left">
-                <div>Courses</div>
+        <div class="Page-container layout-container
+                hero-container
+                
+                
+        " style="padding-bottom: 100px">
+            <h1 class="hero-text-top layout-container" style="z-index: 3">
+                <div>
+                    Courses
+                </div>
             </h1>
             
-                <h1 class="hero-text-bottom layout-container">
+                <h1 class="hero-text-bottom layout-container" style="font-size: 2.3rem">
                     <div>Buy any <a href="#plans">any package</a> for lifetime access</div>
                 </h1>
             
         </div>
+        
+        
+            <div class="hero-tlcutout">
+                <img src="/static/images/classphotos23/IMG_2828_cropped_sized_background_cutout.jpg">
+                <img src="/static/images/classphotos23/IMG_2828_cropped_sized_cutout.png">
+            </div>
+        
     
 
+    <slot name="above-page"></slot>
     <slot class="Page-container layout-container">
 
 <!--
@@ -86,7 +114,7 @@ packages include lifetime access to our entire course curriculum.</p>
 -->
 
 <div style="margin-top: -80px"></div>
-<x-courses modulo-original-html="">
+<x-courses modulo-mount-html="">
     <h1>Courses</h1>
     <p>Our curriculum consists of 5 multi-segmented courses, which we use to
     create a custom paced full stack curriculum for each student in our
@@ -95,7 +123,7 @@ packages include lifetime access to our entire course curriculum.</p>
         <ul>
             
                 <li>
-                    <button @click:="script.selectCourse" payload="prep">
+                    <button @click:="script.selectCourse" payload="prep" modulo-mount-patches="4,@click:">
                         <span class="step">1</span>
                         <span class="label">Prep</span>
                         <span class="weeks">2-6 weeks</span>
@@ -103,7 +131,7 @@ packages include lifetime access to our entire course curriculum.</p>
                 </li>
             
                 <li>
-                    <button @click:="script.selectCourse" payload="fundamentals">
+                    <button @click:="script.selectCourse" payload="fundamentals" modulo-mount-patches="4,@click:">
                         <span class="step">2</span>
                         <span class="label">Fundamentals</span>
                         <span class="weeks">4-12 weeks</span>
@@ -111,7 +139,7 @@ packages include lifetime access to our entire course curriculum.</p>
                 </li>
             
                 <li>
-                    <button @click:="script.selectCourse" payload="backend">
+                    <button @click:="script.selectCourse" payload="backend" modulo-mount-patches="4,@click:">
                         <span class="step">3</span>
                         <span class="label">Backend</span>
                         <span class="weeks">4-12 weeks</span>
@@ -119,7 +147,7 @@ packages include lifetime access to our entire course curriculum.</p>
                 </li>
             
                 <li>
-                    <button @click:="script.selectCourse" payload="frontend">
+                    <button @click:="script.selectCourse" payload="frontend" modulo-mount-patches="4,@click:">
                         <span class="step">4</span>
                         <span class="label">Frontend</span>
                         <span class="weeks">6-14 weeks</span>
@@ -127,7 +155,7 @@ packages include lifetime access to our entire course curriculum.</p>
                 </li>
             
                 <li>
-                    <button @click:="script.selectCourse" payload="career">
+                    <button @click:="script.selectCourse" payload="career" modulo-mount-patches="4,@click:">
                         <span class="step">5</span>
                         <span class="label">Career</span>
                         <span class="weeks">4-12 weeks</span>
@@ -166,12 +194,10 @@ packages include lifetime access to our entire course curriculum.</p>
                 </div>
             </div>
             
-                <p class="free" title="This course is free. Start immediately!">FREE!</p>
             
-            
-                <p>Learn foundational skills while creating cool, useful
-        websites from scratch.  Learn how to embed music, videos, maps,
-        e-commerce stores, and more!</p>
+                <p>Open Curriculum. Learn foundational skills while creating
+        cool, useful websites from scratch.  Learn how to embed music, videos,
+        maps, e-commerce stores, and more!</p>
             
             
             <div class="bottom-wrapper">
@@ -189,16 +215,36 @@ packages include lifetime access to our entire course curriculum.</p>
                 
                 
                 
+                    
+                    <div class="included-explainer">
+                        
+                        
+                            <strong>Module Count:</strong> 6
+                        
+                    </div>
+                
             </div>
 
             
-                <p class="url">
-                    <a href="https://freecodinglessons.com/foundations/1.1/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
-                        BEGIN&nbsp;»
+                <div class="buy-button-wrapper">
+                    <a href="/courses/#plans" class="getbtn">
+                    GET&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
-                    
-
-                </p>
+                    <div class="included-explainer">
+                        <strong style="font-size: 1.5rem;">$149</strong>
+                        <em>BUNDLE</em>
+                        <p>Video Course &amp;<br>Group Tutoring Bundle</p>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
+                        <!--
+                        <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
+                          🛒&nbsp;GET&nbsp;&raquo;
+                        </a>
+                        -->
+                    </div>
+                </div>
             
             </div>
         </div>
@@ -224,13 +270,11 @@ packages include lifetime access to our entire course curriculum.</p>
                 </div>
             </div>
             
-                <p class="free" title="This course is free. Start immediately!">FREE!</p>
-            
             
                 <p>
-            Learn design trends, re-usable components, and how to use
-            frameworks, such as Tailwind CSS. Finally, use Modulo.js to launch
-            a JAMStack app on Netlify.
+            Open Curriculum. Learn design trends, re-usable components, and how
+            to use frameworks, such as Tailwind CSS. Finally, use Modulo.js to
+            launch a JAMStack app on Netlify.
         </p>
             
             
@@ -249,16 +293,36 @@ packages include lifetime access to our entire course curriculum.</p>
                 
                 
                 
+                    
+                    <div class="included-explainer">
+                        
+                        
+                            <strong>Module Count:</strong> 6
+                        
+                    </div>
+                
             </div>
 
             
-                <p class="url">
-                    <a href="https://freecodinglessons.com/foundations/3.1/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
-                        BEGIN&nbsp;»
+                <div class="buy-button-wrapper">
+                    <a href="/courses/#plans" class="getbtn">
+                    GET&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
-                    
-
-                </p>
+                    <div class="included-explainer">
+                        <strong style="font-size: 1.5rem;">$149</strong>
+                        <em>BUNDLE</em>
+                        <p>Video Course &amp;<br>Group Tutoring Bundle</p>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
+                        <!--
+                        <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
+                          🛒&nbsp;GET&nbsp;&raquo;
+                        </a>
+                        -->
+                    </div>
+                </div>
             
             </div>
         </div>
@@ -326,8 +390,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -404,8 +470,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -482,8 +550,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -560,8 +630,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -638,8 +710,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -716,8 +790,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -790,8 +866,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -868,8 +946,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -946,8 +1026,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -1024,8 +1106,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -1098,8 +1182,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -1172,8 +1258,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -1250,8 +1338,10 @@ packages include lifetime access to our entire course curriculum.</p>
                         <strong style="font-size: 1.5rem;">$149</strong>
                         <em>BUNDLE</em>
                         <p>Video Course &amp;<br>Group Tutoring Bundle</p>
-                        <em>» Lifetime Access to All Courses</em>
-                        <em>» 2 Months Video Help</em>
+                        » Lifetime Access to All Courses<br>
+                        <em>($135 separately)</em><br>
+                        » 2 Months Video Help<br>
+                        <em>($149 separately)</em>
                         <!--
                         <a href="https://kickstartcoding.online/apply/" class="Page-navLink" style="min-width: 40px; font-size: 1rem">
                           🛒&nbsp;GET&nbsp;&raquo;
@@ -1278,15 +1368,15 @@ course curriculum.</strong></p>
 
 <br>
 <br>
-<x-planmenu modulo-original-html="">
+<x-planmenu modulo-mount-html="">
 
-    <article title="Group Tutoring" class="  ">
+    <article title="Videos &amp; Self-Paced" class="  ">
         
             <div class="
                 h3-wrapper
                 
             ">
-                <h3>Group Tutoring</h3>
+                <h3>Videos &amp; Self-Paced</h3>
             </div>
         
         
@@ -1294,13 +1384,16 @@ course curriculum.</strong></p>
         <p class="lectures">
             Prerecorded Lectures
         </p>
-        <p class="summary">For only $149, unlock lifetime access to entire video
-        curriculum for self-paced work, in addition to 2 months of Q&amp;A
-        help during weekly group review sessions.</p>
+        <p class="summary">For only $135, unlock lifetime access to entire video
+        curriculum for self-study.<br>
+        <span style="font-family: Raleway; background: var(--sunshine);line-height: 1.8"><strong>New to Kickstart</strong> Discount</span><br>
+        For only $14, add 2 months of group review &amp; Linux Lab!
+        <br><em>(renews at $149 for 2 months)</em></p>
         
-            <p class="stars">
-                ★★★★★<br>
-                <span>Five-star rated program*</span>
+            <p class="prices">
+                <span class="crossed-price">
+                    $284
+                </span>
             </p>
         
 
@@ -1310,9 +1403,15 @@ course curriculum.</strong></p>
         <p class="length">
             2 months
         </p>
+
         
-            <a class="buy-btn" href="#">Purchase</a>
+
         
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        
+        
+        
+            <p class="inquire">Open Enrollment: Start self-paced, pop into Office Hours when you get stuck.</p>
         
     </article>
 
@@ -1332,7 +1431,7 @@ course curriculum.</strong></p>
         </p>
         <p class="summary">Level up your skills by purchasing a 1:1 tutoring
         program, affordably priced to renew every 2 months. Includes
-        video curriculum and all group tutoring options as well.</p>
+        video curriculum and all group tutoring and lab options as well.</p>
         
             <p class="stars">
                 ★★★★★<br>
@@ -1346,9 +1445,16 @@ course curriculum.</strong></p>
         <p class="length">
             2 months
         </p>
+
         
-            <a class="buy-btn" href="#">Purchase</a>
+
         
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        
+        
+        
+            <p class="inquire">Open Enrollment: Rolling enrollment, enroll now to get 1:1 help
+        immediately.</p>
         
     </article>
 
@@ -1368,10 +1474,9 @@ course curriculum.</strong></p>
         <p class="lectures">
             Prerecorded Lectures
         </p>
-        <p class="summary">We take a coding beginner to job-ready status in 9
-        months. The price includes 6 months of 1:1 tutoring, 9 months
-        of group work sessions, and job-hunt coaching to kickstart your
-        career in tech.</p>
+        <p class="summary">We guide a beginner or intermediate coder to job-ready status
+        in 9 months.  We combine 1:1 tutoring with on-site and Zoom workgroup
+        sessions and help you kickstart your career in tech.</p>
         
             <p class="stars">
                 ★★★★★<br>
@@ -1385,9 +1490,15 @@ course curriculum.</strong></p>
         <p class="length">
             9 months
         </p>
+
+        
+
         
             <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
         
+        
+        
+            <p class="inquire">Limited Enrollment: Enroll right away to save a spot &amp; start preparing!</p>
         
     </article>
 
@@ -1424,15 +1535,19 @@ course curriculum.</strong></p>
         <p class="length">
             9 month bundle
         </p>
+
         
-            <a class="buy-btn buy--inquire" href="#">Inquire*</a>
+
+        
+            <a class="buy-btn buy--inquire" href="https://kickstartcoding.online/apply/">Inquire*</a>
         
         
-            <p class="inquire">* Note: Next cohort only will begin after Q1 2024</p>
+            <p class="inquire">* Limited Enrollment: Contact us if interested</p>
+        
         
     </article>
 
-<div style="grid-column: span 4; font-size: 0.8rem;">
+<div class="review-site-links">
     <p>* We are proud to have earned 5/5 for our commitment to
     excellence in affordable coding education. Review sites:
     <a href="https://www.coursereport.com/schools/kickstart-coding" target="_blank">Course Report</a>,
@@ -1466,7 +1581,7 @@ course curriculum.</strong></p>
                     </li>
                 
                     <li>
-                        <a href="/index.html#learn"> Learn</a>
+                        <a href="/learn/"> Learn</a>
                     </li>
                 
                     <li>
@@ -1518,11 +1633,5 @@ course curriculum.</strong></p>
         </p>
     </footer>
 
-<script src="/_modulo/modulo-build-xx8aatco.js"></script><script>window.moduloBuild && modulo.start(window.moduloBuild);
-modulo.assets.require("library1_configuration");
-modulo.assets.require("library_Page");
-modulo.assets.require("library_FeaturedTestimonials");
-modulo.assets.require("library_Testimonials");
-modulo.assets.require("library_FeaturedArticles");
-modulo.assets.require("library1_PlanMenu");
-modulo.assets.require("library1_Courses");</script></body></html>
+<script src="/_modulo/modulo-build-xxmm8i55.js"></script>
+</body></html>

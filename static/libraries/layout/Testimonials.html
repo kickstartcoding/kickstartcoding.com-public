@@ -1,7 +1,6 @@
 <main>
     {% for testimonial in staticdata %}
-    {#<div class="sliding-box {% if testimonial.selected == state.selected %}sliding-box--selected{% endif %}">#}
-    <div class="sliding-box">
+    <div class="sliding-box {% if state.selected == testimonial.name %}sliding-box--selected{% endif %}">
         <article>
             <label for="testimonial-{{ testimonial.name }}">
                 <img src="/static/images/testimonials/{{ testimonial.img }}" alt="Portrait photograph of {{ testimonial.name }}">
@@ -14,6 +13,9 @@
                 {% if testimonial.name %}
                     <p class="name">{{ testimonial.name }}</p>
                     <p class="location">{{ testimonial.location }}</p>
+                {% endif %}
+                {% if testimonial.featured is null %}
+                    <p>&ldquo;{{ testimonial.text|safe }}&rdquo;</p>
                 {% endif %}
             </label>
             {% comment %}

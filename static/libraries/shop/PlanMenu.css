@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
     width: 900px;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 p.most-popular {
@@ -221,18 +221,99 @@ h3 {
     padding-right: 30px;
 }
 
-
-
-
+.review-site-links {
+    grid-column: span 4;
+    font-size: 0.8rem;
+}
 
 @media (max-width: 992px) {
     :host {
-        grid-template-columns: 1fr 1fr;
+        font-size: 0.8rem;
+        width: 600px;
+    }
+    h3 {
+        font-size: 1.0rem;
+    }
+    p {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+    p.most-popular {
+        font-size: 0.8rem;
+    }
+
+    article:hover {
+        transform: scale(1.5);
+    }
+
+    .crossed-price {
+        font-size: 0.6rem;
+    }
+
+    .online {
+        font-size: 0.67rem;
+    }
+
+    .lectures {
+        font-size: 0.67rem;
+    }
+
+    .big-price {
+        font-size: 1.5rem;
+    }
+
+
+    .big-price::before {
+        font-size: 1.5rem;
+    }
+    .stars span {
+        font-size: 0.4rem;
+    }
+
+    .stars {
+        font-size: 1.0rem;
+    }
+
+    .inquire {
+        font-size: 0.6rem;
+        padding: 2px;
+    }
+    .buy-btn {
+        font-size: 1.0rem;
+    }
+    p.most-popular {
+        top: -53px;
+        z-index: 9;
+        line-height: 3;
+    }
+
+    .review-site-links {
+        font-size: 0.7rem;
     }
 }
+
+
+@media (max-width: 776px) {
+    :host {
+        position: static !important;
+        max-width: 90vw;
+    }
+}
+
+
 @media (max-width: 576px) {
     :host {
-        display: block;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        position: static !important;
+    }
+
+
+    article:hover {
+        transform: scale(1.1);
+    }
+    .review-site-links {
+        grid-column: span 2;
     }
 }
 

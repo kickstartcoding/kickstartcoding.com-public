@@ -21,7 +21,7 @@
         <p class="lectures">
             {{ plan.lectures|hlinperson|safe }} Lectures
         </p>
-        <p class="summary">{{ plan.summary }}</p>
+        <p class="summary">{{ plan.summary|safe }}</p>
         {% if plan.crossedPrice %}
             <p class="prices">
                 <span class="crossed-price">
@@ -41,19 +41,27 @@
         <p class="length">
             {{ plan.length }}
         </p>
+
+        {% comment %}
         {% if plan.price lt 900 %}
             <a class="buy-btn" href="#">Purchase</a>
-        {% elif plan.inquire %}
-            <a class="buy-btn buy--inquire" href="#">Inquire*</a>
+        {% endif %}
+        {% endcomment %}
+
+        {% if plan.inquire %}
+            <a class="buy-btn buy--inquire" href="https://kickstartcoding.online/apply/">Inquire*</a>
         {% else %}
             <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
         {% endif %}
         {% if plan.inquire %}
             <p class="inquire">* {{ plan.inquire }}</p>
         {% endif %}
+        {% if plan.enrollInfo %}
+            <p class="inquire">{{ plan.enrollInfo }}</p>
+        {% endif %}
     </article>
 {% endfor %}
-<div style="grid-column: span 4; font-size: 0.8rem;">
+<div class="review-site-links">
     <p>* We are proud to have earned 5/5 for our commitment to
     excellence in affordable coding education. Review sites:
     <a href="https://www.coursereport.com/schools/kickstart-coding" target="_blank">Course Report</a>,

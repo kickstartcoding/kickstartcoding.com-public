@@ -1,9 +1,22 @@
 <head>
     <title>{{ props.title }}</title>
     <meta charset="utf8" />
-    <link rel="stylesheet" href="/static/css/site.css" />
+
+    <meta name="title" content="{{ props.title }} | Kickstart Coding">
+    <meta name="description" content="Learn to code with our one-on-one bootcamp program">
+    <meta name="keywords" content="bootcamp, python, learn to code, free coding, coding lessons. online bootcamp, tutoring, computer science, programming, javascript, react, coding school, coding academy">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="5 days">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="//fonts.googleapis.com/css?family=Raleway:300,400,700,800%7CLato:300,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/css/site.css" />
 </head>
 <body>
     <a name="nav"></a>
@@ -12,7 +25,7 @@
         <ul>
             {% for page in script.navigation %}
                 <li>
-                    <a href="{% if page.file == props.navselected %}#c{% else %}/{{ page.file }}#c{% endif %}"
+                    <a href="{% if page.file == props.navselected %}#c{% else %}/{{ page.file }}{% endif %}"
                         title="{{ page.title }}"
                         class="
                             Page-navLink
@@ -34,18 +47,37 @@
 
     <a name="c"></a> <!-- c = content -->
     {% if props.toptitle %}
-        <div class="Page-container layout-container" style="background: WhiteSmoke">
-            <h1 class="hero-text-top layout-container" style="text-align: left">
-                <div>{{ props.toptitle }}</div>
+        <div class="Page-container layout-container
+                hero-container
+                {% if props.tltall %}hero--tltall{% endif %}
+                {% if props.landing %}hero--landing{% endif %}
+        " style="padding-bottom: 100px">
+            <h1 class="hero-text-top layout-container" style="z-index: 3">
+                <div>
+                    {{ props.toptitle }}
+                </div>
             </h1>
             {% if props.bottomtitle %}
-                <h1 class="hero-text-bottom layout-container">
+                <h1 class="hero-text-bottom layout-container" style="font-size: 2.3rem">
                     <div>{{ props.bottomtitle|safe }}</div>
                 </h1>
             {% endif %}
         </div>
+        {% if props.rightimage %}
+            <img
+                style="border: 10px solid var(--bluebird); max-width: 400px; float: right; margin-top: -150px; margin-left: 0"
+                src="{{ props.rightimage }}"
+            />
+        {% endif %}
+        {% if props.tlcutout %}
+            <div class="hero-tlcutout">
+                <img src="{{ props.tlcutoutbg }}" />
+                <img src="{{ props.tlcutout }}" />
+            </div>
+        {% endif %}
     {% endif %}
 
+    <slot name="above-page"></slot>
     <slot class="Page-container layout-container">
     </slot>
 

@@ -1,23 +1,28 @@
-<!--
-    This is the common "header" across all the pages on this site. Define more
-    components here to have them be available with an "x-" prefix, or create
-    new libraries and include them in file with <Library -src=...></Library>
-    type syntax.
+<script Configuration>
+     function setupFathom(code) {
+        // Check common things we skip
+        const host = window.location.host;
+        if (host.startsWith('localhost') ||
+                host.includes('.local') ||
+                host.startsWith('127') ||
+                host.startsWith('192') ||
+                host.startsWith('dev--'))  {
+            return;
+        }
+        (function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+            m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//an.michaelb.org/tracker.js', 'fathom');
+        fathom('set', 'siteId', code);
+        fathom('trackPageview');
+    }
+    setupFathom('JUSMY');
+</script>
 
-    To get you started, we import the "layout" library, and load it with an
-    "x-" prefix.
--->
-
-<!--<script Configuration -src="https://cdn.tailwindcss.com"> </script>-->
-<!--<script Configuration -src="/static/js/tailwindBuild.js"></script>-->
-
-<Library namespace="x" -src="/static/libraries/layout.html"></Library>
-<Library namespace="x" -src="/static/libraries/shop.html"></Library>
-
-
-<!-- Get TailwindCSS going! -->
-<!--<script Configuration -src="https://cdn.tailwindcss.com"> </script>-->
-<!--
-    To get started with custom JS and/or custom Component Parts:
--->
-
+<Library namespace="x" -src="./layout.html"></Library>
+<Library namespace="x" -src="./shop.html"></Library>

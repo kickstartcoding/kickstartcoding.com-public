@@ -49,8 +49,8 @@ body {
     /*min-height: calc(100vh - 200px);*/
     padding-top: 80px;
     max-width: calc(100vw);
-    overflow: hidden;
-    background: white;
+    /*overflow: hidden;*/
+    /*background: white;*/
 }
 
 
@@ -65,15 +65,17 @@ body {
 .Page-nav {
     position: fixed;
     display: grid;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
     grid-template-columns: 1fr minmax(auto, 900px) 1fr;
-    width: 100vw;
     padding-right: 10px;
     padding-left: 10px;
     box-shadow: 0 5px 5px #00000033;
     background: whiteSmoke;
     /*border-top: 2px solid var(--golden);*/
     border-top: 2px solid var(--cerulean);
-    z-index: 5;
+    z-index: 100;
 }
 
 .Page-navHBMenu { /*hide hbmenu */
@@ -262,6 +264,7 @@ body {
 }
 
 .hero-inset {
+    overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
     grid-column: 1 / span 3;
@@ -276,6 +279,27 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 900px) 1fr;
     */
+}
+
+.hero-container {
+    background: WhiteSmoke;
+    overflow: hidden;
+}
+.hero--landing {
+    height: 36vh;
+    background: white;
+    /*background-image: 
+      linear-gradient(to bottom, #ffffff11, #ffffffff),
+      url('/static/images/classphotos23/IMG_3080_tiles.JPG');*/
+    /*background-image: */
+}
+
+.hero--landing .hero-text-bottom > div {
+    font-size: 3rem;
+    font-weight: 200;
+}
+.hero--landing div {
+    padding-right: 150px;
 }
 
 .hero-inset > * {
@@ -342,6 +366,13 @@ body {
     z-index: 1;
 }
 
+.hero-characters-right {
+    position: absolute;
+    right: 1%;
+    top: -300px;
+    height: 400px;
+}
+
 .Page-container .hero-text-top,
 .Page-container .hero-text-bottom {
     padding-top: 65px;
@@ -361,14 +392,35 @@ body {
     padding: 0;
 }
 
-.company-image-cluster {
+
+.hero-tlcutout {
+    width: 25vw;
+    position: relative;
+    top: -300px;
+    margin: 60px;
+    margin-left: 5vw;
 }
 
-.company-image-cluster > img {
-    float: right;
-    margin: 10px;
-    opacity: 0.5;
-    max-width: 200px;
+.hero--landing div.hero-tlcutout {
+    top: -700px;
+}
+
+.hero-tlcutout > img {
+    border: 2px solid var(--bluebird);
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.hero-tlcutout > img:last-child {
+    z-index: 4;
+    border-radius: 30px 100px 40px 50px;
+    /*border: 5px solid var(--bluebird);*/
+    /*border-width: 1px  3px 3px;*/
 }
 
 .big-well-card {
@@ -436,7 +488,7 @@ h1 {
     .Page-nav img { /* Move 10px left */
         margin-left: -10px;
         margin-right: 10px;
-        width: 210px;
+        /*width: 210px;*/
         margin-top: -8px; /* move up */
     }
 
@@ -451,15 +503,24 @@ h1 {
         text-align: right;
         margin-top: 4px;
     }
+    .hero-characters-right {
+        height: 290px;
+        right: 0;
+    }
 
 }
 
 @media (max-width: 992px) {
+    .hero-tlcutout {
+        width: 37vw;
+        margin-top: 20px;
+    }
+
     .Page-container .hero-image-left {
         z-index: 0;
     }
     .Page-nav img {
-        width: 100%;
+        /*width: 100%;*/
     }
     .Page-nav ul {
         display: grid;
@@ -493,7 +554,32 @@ h1 {
     }
     .Page-container .hero-text-top {
         padding: 0;
+        padding-right: 10px;
         margin-top: -60px;
+    }
+    .Page-container .hero-text-bottom {
+        margin-top: 60px;
+        margin-bottom: -60px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .hero--tltall {
+        margin-bottom: -5px;
+    }
+    .hero--tltall .hero-text-top,
+    .hero--tltall .hero-text-bottom  {
+        width: 100%;
+    }
+    .hero--tltall .hero-text-bottom  > div {
+        text-align: right;
+        max-width: 55vw;
+        position: relative;
+        right: -40vw;
+        font-size: 2rem;
+    }
+    .hero--tltall .hero-text-top{
+        padding-bottom: 100px;
     }
 
     .Page-navLink--selected {
@@ -509,6 +595,27 @@ h1 {
     .u--layout { /* Generic layout element - flex -> grid -> static */
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .hero--landing .hero-text-bottom {
+        /* collapse hero text bottom margin */
+        margin-top: -100px;
+    }
+    .hero--landing .hero-text-top {
+        margin-top: -100px;
+    }
+    .u--collapse-100 {
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+    .hero--landing div {
+        padding-right: 0;
+    }
+    .hero-characters-right {
+        position: absolute;
+        height: 200px;
+        top: -150px;
+        left: 0;
     }
 }
 

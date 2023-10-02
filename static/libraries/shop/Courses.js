@@ -4,15 +4,15 @@
         title: 'Foundations',
         subtitle: 'Web Design: Intro to HTML and CSS',
         course: 'prep',
-        content: `Learn foundational skills while creating cool, useful
-        websites from scratch.  Learn how to embed music, videos, maps,
-        e-commerce stores, and more!`,
+        content: `Open Curriculum. Learn foundational skills while creating
+        cool, useful websites from scratch.  Learn how to embed music, videos,
+        maps, e-commerce stores, and more!`,
         skill: 1,
         img: 'computer-g0e7058b72_1280.jpg',
         imgalt: 'A computer with rainbow',
         imgfg: 'white',
-        free: true,
-        url: 'https://freecodinglessons.com/foundations/1.1/',
+        //free: true,
+        //url: 'https://freecodinglessons.com/foundations/1.1/',
         modules: [
             { num: '1.1', title: 'HTML basics' },
             { num: '1.2', title: 'Tags and Styles' },
@@ -28,16 +28,16 @@
         subtitle: 'Web Design: Components & Frameworks',
         course: 'prep',
         content: `
-            Learn design trends, re-usable components, and how to use
-            frameworks, such as Tailwind CSS. Finally, use Modulo.js to launch
-            a JAMStack app on Netlify.
+            Open Curriculum. Learn design trends, re-usable components, and how
+            to use frameworks, such as Tailwind CSS. Finally, use Modulo.js to
+            launch a JAMStack app on Netlify.
         `,
         skill: 1,
         img: 'hd-wallpaper-g721518917_1280.jpg',
         imgalt: 'Illustration of rainbow going through monitor',
         imgfg: 'white',
-        free: true,
-        url: 'https://freecodinglessons.com/foundations/3.1/',
+        //free: true,
+        //url: 'https://freecodinglessons.com/foundations/3.1/',
         modules: [
             { num: '3.1', title: 'Tailwind' },
             { num: '3.2', title: 'Forms' },

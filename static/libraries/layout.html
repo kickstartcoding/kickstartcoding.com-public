@@ -2,8 +2,13 @@
     <Props
         title
         toptitle
+        rightimage
+        tlcutout
+        tlcutoutbg
+        tltall
         bottomtitle
         navselected
+        landing
     ></Props>
 
     <Template
@@ -34,7 +39,8 @@
                     },
                     {
                         title: "Learn",
-                        file: "index.html#learn",
+                        //file: "index.html#learn",
+                        file: "learn/",
                     },
                     {
                         title: "Outreach",
@@ -50,9 +56,12 @@
 <Component name="FeaturedTestimonials">
     <Template -src="/static/libraries/layout/Testimonials.html"></Template>
     <Style -src="/static/libraries/layout/Testimonials.css"></Style>
+    <State
+        selected=""
+    ></State>
     <script StaticData -src="/static/libraries/layout/Testimonials.js">
         .filter(
-            item => item.featured
+            item => item.featured // only show featured
         )
     </script>
 </Component>
@@ -66,7 +75,7 @@
         -src="/static/libraries/layout/Testimonials.css"
     ></Style>
     <State
-        selected
+        selected=""
     ></State>
     <script StaticData -src="/static/libraries/layout/Testimonials.js">
         .map(
@@ -88,6 +97,21 @@
     <State
         articles:=[]
     ></State>
+    <StaticData -data-type="js">
+        {"results": [{"url":
+        "https://kickstartcoding.com/learn/pro-tips/six-important-tips-learning-code/",
+        "title": "Six Important Tips for Learning to Code", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/55/01/55011557-4ecf-4ce1-8efe-81555d5180d4/neat-lg-30ca40811ecee7f931167680e6b0412b.jpg"},
+        {"url":
+        "https://kickstartcoding.com/learn/articles/building-debug-trainer-deskop-app-tauri/",
+        "title": "Building the Debug Trainer Deskop App with Tauri", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/44/f4/44f43d18-76fc-47d2-aae7-0756d395fda4/tauri_homepage.png"},
+        {"url": "https://kickstartcoding.com/learn/articles/bootcamp-education-worth-it/",
+        "title": "Is a Bootcamp Education Worth the Cost?", "image":
+        "https://sfo2.digitaloceanspaces.com/livesyllabus/ls1/filer_public/cc/45/cc45281d-bef1-4ccc-ab0d-1da8fd1368e8/book-731199_1920.jpg"}
+        ]}
+
+    </StaticData>
     <Script>
         const hardcodedData = {"results": [{"url":
         "https://kickstartcoding.com/learn/pro-tips/six-important-tips-learning-code/",
