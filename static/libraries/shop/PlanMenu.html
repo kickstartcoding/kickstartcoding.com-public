@@ -1,8 +1,7 @@
-
-{% for plan in staticdata %}
+{% for plan in script.plans %}
     <article
         title="{{ plan.title }}"
-        class=" {% if plan.inquire %} bootcamp {% endif %} "
+        class="plan {% if plan.inquire %} bootcamp {% endif %} "
     >
         {% if plan.title %}
             <div class="

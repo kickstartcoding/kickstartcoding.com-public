@@ -79,7 +79,7 @@
         <div class="Page-container layout-container
                 hero-container
                 hero--tltall
-                
+                hero--landing
         " style="padding-bottom: 100px">
             <h1 class="hero-text-top layout-container" style="z-index: 3">
                 <div>
@@ -88,7 +88,7 @@
             </h1>
             
                 <h1 class="hero-text-bottom layout-container" style="font-size: 2.3rem">
-                    <div>&amp; kickstart your coding career!</div>
+                    <div>with our one-on-one<br>bootcamp program</div>
                 </h1>
             
         </div>
@@ -101,71 +101,272 @@
         
     
 
-    <slot name="above-page"></slot>
+    <slot name="above-page"><div class="u--collapse-100" slot="above-page"></div><div style="position: relative; z-index: 10; " slot="above-page">
+    <img class="hero-characters-right" src="/static/images/characters_version_2_altered.png">
+</div><div style="width: 19vw; position: relative; top: -3vw; left: 2vw; z-index: 5;" slot="above-page">
+    <img style="border: 2px solid var(--bluebird); max-width: 100%; position: absolute; top: 0; left: 0; z-index: 10; border-radius: 8px; padding: 5px" src="/static/images/classphotos23/old_photo_sign_angle.jpg">
+        <!--src="/static/images/classphotos23/IMG_2864_cropped_sized.jpg"-->
+</div><div style="width: 15vw; position: relative; top: 6vw; left: 10vw; z-index: 5;" slot="above-page">
+    <img style="border: 2px solid var(--bluebird); max-width: 100%; position: absolute; top: 0; left: 0; z-index: 10; border-radius: 8px 20px 10px 30px; padding: 5px" src="/static/images/classphotos23/IMG_2864_cropped_sized.jpg">
+        <!--src="/static/images/classphotos23/IMG_2883_cropped_sized.jpg"-->
+</div></slot>
     <slot class="Page-container layout-container">
 
-<x-planmenu short="true" modulo-mount-html="">
+
+
+
+<!--<div style="width: 25vw; position: relative; top: -15vw; left: -25vw; z-index: 10;">-->
+
+
+
+    <!--tlcutoutbg="/static/images/characters_version_2_altered.png"-->
+<!--
+<div style="margin-top:100px"></div>
+
+<h1 class="hero-text-top layout-container" style="z-index: 3; margin-top: 50px; text-align: left;">
+    <div style="margin-left: 40px">Learn to code</div>
+</h1>
+
+<h1 class="hero-text-bottom layout-container" style="text-align: left;">
+    <div style="margin-left: 40px">with our one-on-one<br />
+    bootcamp program</div>
+</h1>
+
+<div style="position: relative; margin-right: -220px">
+    <img
+        class="hero-image-left"
+        src="/static/images/characters_version_2_altered.png"
+        style="z-index: 3; position: absolute; right: 0;"
+    />
+</div>
+-->
+<!--
+<img
+    class="hero-image-left"
+    src="/static/images/characters_version_2_altered.png"
+    style="z-index: 3;  position: absolute; right: 0; top: 800px"
+/>
+-->
+
+<!--
+<h1 class="hero-text-top layout-container" style="z-index: 3; margin-top: 50px;">
+    <div style="margin-left: 40px">Learn to code</div>
+</h1>
+
+<h1 class="hero-text-bottom layout-container">
+    <div style="margin-left: 40px">with our one-on-one<br />
+    bootcamp program</div>
+</h1>
+<img
+    class="hero-image-left"
+    src="/static/images/characters_version_2_altered.png"
+    style="z-index: 3;"
+/>
+-->
+
+<!--<div style="width: 30vw; position: relative; top: -17vw; left: -10vw; margin: 10px">-->
+<!--<div style="width: 30vw; position: relative; top: -18.5vw; left: -20vw; margin: 10px">-->
+<!--
+<div style="width: 25vw; position: relative; top: -15vw; left: -25vw;">
+<img
+    style="border: 2px solid var(--bluebird); max-width: 100%; position: absolute; top: 0; left: 0; z-index: 2; border-radius: 8px; padding: 5px"
+    src="/static/images/classphotos23/IMG_2633.JPG"
+/>
+</div>
+-->
+<!--
+<img
+    style="border: 2px solid var(--bluebird); max-width: 100%; position: absolute; top: 0; left: 0; z-index: 4;  border-radius: 30px 100px 40px 50px; padding: 5px"
+    src="/static/images/classphotos23/IMG_2633.JPG"
+/>
+-->
+<!--
+<div style="height: 350px; text-align: right;  letter-spacing: -0.025em; display: relative; z-index: 1;">
+</div>
+-->
+
+<!--<div style="margin-top:100px"></div>-->
+<!--<div style="margin-top: 37px"></div>-->
+
+<x-planmenu style="position: relative; left: 20%; top: -100px; z-index: 10" modulo-mount-html="">
         
             
-<article class="solo-info">
-    <h2>”Bootcamp in a Box”</h2>
-    <p class="summary">For 6 years, Kickstart Coding's bootcamp program has guided 100s
-    of students to build apps, unlock their creative potential, or find
-    fulfilling professions in Silicon Valley, and beyond.</p>
-    <p class="stars">
-        ★★★★★<br>
-        <span>Five-star rated program*</span>
-    </p>
-</article>
+    <article title="Videos &amp; Self-Paced" class="plan  ">
+        
+            <div class="
+                h3-wrapper
+                
+            ">
+                <h3>Videos &amp; Self-Paced</h3>
+            </div>
+        
+        
+        <p class="online">(online only)</p>
+        <p class="lectures">
+            Prerecorded Lectures
+        </p>
+        <p class="summary">For only $135, unlock lifetime access to entire video
+        curriculum for self-study.<br>
+        <span style="font-family: Raleway; background: var(--sunshine);line-height: 1.8"><strong>New to Kickstart</strong> Discount</span><br>
+        For only $14, add 2 months of group review &amp; Linux Lab!
+        <br><em>(renews at $149 for 2 months)</em></p>
+        
+            <p class="prices">
+                <span class="crossed-price">
+                    $284
+                </span>
+            </p>
+        
 
+        <p class="prices">
+            <span class="big-price">149</span>
+        </p>
+        <p class="length">
+            2 months
+        </p>
 
-<article class="solo-info">
-  <img src="/static/images/boximages/fullstack-bootcamp-bundle.png" style="width: 250px; height: 250px" title="3D Render of the Full Stack Bootcamp bundle as though it were a physical box (and not just a virtual box)">
-</article>
+        
 
+        
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        
+        
+        
+            <p class="inquire">Open Enrollment: Start self-paced, pop into Office Hours when you get stuck.</p>
+        
+    </article>
 
-<article class="plan solo-plan">
-    <div class="h3-wrapper">
-        <h3>Bootcamp Bundle</h3>
-    </div>
-    <p class="prices">
-        <span class="crossed-price">$184</span>
-    </p>
-    <p class="prices">
-        <span class="big-price">99</span>
-    </p>
-    <em>Beginners welcome!</em>
-    <!--
-    <p class="length">
-        Lifetime Access
-    </p>
-    -->
-    <a class="buy-btn" href="https://kickstartcoding.online/apply/" title="Early 2024 Notice: One-click buying
-    sitll under construction, please fill out an application until we are done!
-    Sorry for the hassle.">Buy Now</a>
-</article>
+    <article title="Private Tutoring" class="plan  ">
+        
+            <div class="
+                h3-wrapper
+                
+            ">
+                <h3>Private Tutoring</h3>
+            </div>
+        
+        
+        <p class="online">(online only)</p>
+        <p class="lectures">
+            Prerecorded Lectures
+        </p>
+        <p class="summary">Level up your skills by purchasing a 1:1 tutoring
+        program, affordably priced to renew every 2 months. Includes
+        video curriculum and all group tutoring and lab options as well.</p>
+        
+            <p class="stars">
+                ★★★★★<br>
+                <span>Five-star rated program*</span>
+            </p>
+        
 
-<article class="solo-info">
-    <ul style="text-align: left">
-        <li>75+ hours of “virtual workshop” videos</li>
-        <li>200+ activities &amp; mini-projects</li>
-        <li>50+ cheat-sheets &amp; study guides</li>
-        <li>4+ self-selected final projects</li>
-        <li><strong>Easy Study Plan Creator</strong> - <em>New in 2024!</em> A
-        "smart" calendar assistant that assigns you due dates based
-        based on your goals and skill-level
-    </li></ul>
-</article>
+        <p class="prices">
+            <span class="big-price">499</span>
+        </p>
+        <p class="length">
+            2 months
+        </p>
 
-<!--
-<em>get structure just like a
-&rdquo;real&ldquo; course!</em>
--->
+        
 
-<!--
-<article class="solo-info">
-</article>
--->
+        
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        
+        
+        
+            <p class="inquire">Open Enrollment: Rolling enrollment, enroll now to get 1:1 help
+        immediately.</p>
+        
+    </article>
+
+    <article title="Hybrid Bootcamp" class="plan  ">
+        
+            <div class="
+                h3-wrapper
+                
+            ">
+                <h3>Hybrid Bootcamp</h3>
+            </div>
+        
+        
+            <p class="most-popular"><strong>Most popular</strong></p>
+        
+        <p class="online">(<span class="text--hlinperson">in-person</span> and/or online)</p>
+        <p class="lectures">
+            Prerecorded Lectures
+        </p>
+        <p class="summary">We guide a beginner or intermediate coder to job-ready status
+        in 9 months.  We combine 1:1 tutoring with on-site and Zoom workgroup
+        sessions and help you kickstart your career in tech.</p>
+        
+            <p class="stars">
+                ★★★★★<br>
+                <span>Five-star rated program*</span>
+            </p>
+        
+
+        <p class="prices">
+            <span class="big-price">2499</span>
+        </p>
+        <p class="length">
+            9 months
+        </p>
+
+        
+
+        
+            <a class="buy-btn buy--apply" href="https://kickstartcoding.online/apply/">Apply</a>
+        
+        
+        
+            <p class="inquire">Limited Enrollment: Enroll right away to save a spot &amp; start preparing!</p>
+        
+    </article>
+
+    <article title="Oakland Bootcamp" class="plan  bootcamp  ">
+        
+            <div class="
+                h3-wrapper
+                
+                h3-wrapper--inquire
+                
+            ">
+                <h3>Oakland Bootcamp</h3>
+            </div>
+        
+        
+        <p class="online">(<span class="text--hlinperson">in-person</span> only)</p>
+        <p class="lectures">
+            Live, <span class="text--hlinperson">On-Site</span> Lectures
+        </p>
+        <p class="summary">Join us in Oakland for our live, on-site full stack
+        coding bootcamp. Bundle consists of five courses, and 1:1
+        tutoring plan.</p>
+        
+            <p class="prices">
+                <span class="crossed-price">
+                    $10,992
+                </span>
+            </p>
+        
+
+        <p class="prices">
+            <span class="big-price">8499</span>
+        </p>
+        <p class="length">
+            9 month bundle
+        </p>
+
+        
+
+        
+            <a class="buy-btn buy--inquire" href="https://kickstartcoding.online/apply/">Inquire*</a>
+        
+        
+            <p class="inquire">* Limited Enrollment: Contact us if interested</p>
+        
+        
+    </article>
 
 <div class="review-site-links">
     <p>* We are proud to maintain 5/5 for our commitment to
@@ -178,11 +379,15 @@
 
         
     </x-planmenu>
+
 <div style="margin-top: 60px"></div>
 
 <div class="hero-inset layout-container">
     <h1 style="font-size: 3.2rem; font-weight: 800">» The <em style="font-weight: 600">flexible</em> route to job-ready</h1>
-    <div class="hero-image" style="border: none; background: url(/static/images/classphotos23/IMG_2661_cropped_flipped.JPG);">
+    <div class="hero-image" style="border: none;
+
+background: url(/static/images/classphotos23/IMG_2661_cropped_flipped.JPG);
+    ">
         <p style="font-size: 2rem; width: 70%; margin-top: 40px; margin-left: 5%; line-height: 2.6rem">
         <span style="background: #ffffffdd; padding: 3px">
         “A flexible bootcamp program for serious
@@ -204,8 +409,8 @@
             program for serious learners to become job-ready for a new career
             in tech.  Like the tech industry, coding bootcamps move at
             lightspeed, which means I see too many students getting left behind
-            at other coding bootcamps. With a model centered around individual
-            learning, we can make sure every student has the opportunity to
+            at other coding bootcamps. With a model centered around 1:1
+            tutoring, we can make sure every student has the opportunity to
             learn, so that even if "life happens", you don't get left
             behind!”</p>
 <img src="https://i.imgur.com/BLbcneR.jpg">

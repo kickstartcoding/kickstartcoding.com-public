@@ -1,0 +1,105 @@
+
+<article class="solo-info">
+    <h2>&rdquo;Bootcamp in a Box&rdquo;</em></h2>
+    <p class="summary">For 6 years, Kickstart Coding's bootcamp program has guided 100s
+    of students to build apps, unlock their creative potential, or find
+    fulfilling professions in Silicon Valley, and beyond.</p>
+    <p class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9733;<br />
+        <span>Five-star rated program*</span>
+    </p>
+</article>
+
+
+<article class="solo-info">
+  <img
+      src="/static/images/boximages/fullstack-bootcamp-bundle.png" 
+      style="width: 250px; height: 250px"
+      title="3D Render of the Full Stack Bootcamp bundle as though it were a physical box (and not just a virtual box)"
+  />
+</article>
+
+
+<article class="plan solo-plan">
+    <div class="h3-wrapper">
+        <h3>Bootcamp Bundle</h3>
+    </div>
+    <p class="prices">
+        <span class="crossed-price">$184</span>
+    </p>
+    <p class="prices">
+        <span class="big-price">99</span>
+    </p>
+    <em>Beginners welcome!</em>
+    <!--
+    <p class="length">
+        Lifetime Access
+    </p>
+    -->
+    <a class="buy-btn" href="https://kickstartcoding.online/apply/" title="Early 2024 Notice: One-click buying
+    sitll under construction, please fill out an application until we are done!
+    Sorry for the hassle.">Buy Now</a>
+</article>
+
+<article class="solo-info">
+    <ul style="text-align: left">
+        <li>75+ hours of &ldquo;virtual workshop&rdquo; videos</li>
+        <li>200+ activities &amp; mini-projects</li>
+        <li>50+ cheat-sheets &amp; study guides</li>
+        <li>4+ self-selected final projects</li>
+        <li><strong>Easy Study Plan Creator</strong> - <em>New in 2024!</em> A
+        "smart" calendar assistant that assigns you due dates based
+        based on your goals and skill-level
+    </ul>
+</article>
+
+<!--
+<em>get structure just like a
+&rdquo;real&ldquo; course!</em>
+-->
+
+<!--
+<article class="solo-info">
+</article>
+-->
+
+<div class="review-site-links">
+    <p>* We are proud to maintain 5/5 for our commitment to
+    excellence in affordable coding education. Review sites:
+    <a href="https://www.coursereport.com/schools/kickstart-coding" target="_blank">Course Report</a>,
+    <a href="https://www.switchup.org/bootcamps/kickstart-coding" target="_blank">Switch Up</a>,
+    and <a href="https://www.yelp.com/biz/kickstart-coding-oakland" target="_blank">Yelp</a>.
+</div>
+{% comment %}
+{% for plan in script.plans %}
+    <article
+        title="{{ plan.title }}"
+        class="solo-plan"
+    >
+        {% if plan.title %}
+            <div class="
+                h3-wrapper
+                {% if plan.inquire %}
+                h3-wrapper--inquire
+                {% endif %}
+            ">
+                <h3>{{ plan.title }}</h3>
+            </div>
+        {% endif %}
+        <p class="summary">{{ plan.summary|safe }}</p>
+        <p class="stars">
+            &#9733;&#9733;&#9733;&#9733;&#9733;<br />
+            <span>Five-star rated program*</span>
+        </p>
+
+        <p class="prices">
+            <span class="big-price">{{ plan.price }}</span>
+        </p>
+        <p class="length">
+            {{ plan.length }}
+        </p>
+
+        <a class="buy-btn" href="#">Buy Now</a>
+    </article>
+{% endfor %}
+{% endcomment %}

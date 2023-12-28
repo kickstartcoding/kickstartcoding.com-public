@@ -26,20 +26,22 @@ p.most-popular {
 }
 
 article {
-    border: 1px solid var(--bluebird);
     border-radius: 5px;
     position: relative;
     min-height: 200px;
-    box-shadow: 0 5px 5px #00000033;
     text-align: center;
-    transition: transform 0.3s, background 0.2s;
-    transform: scale(1.0);
-    /*background: #ffffee;*/
-    background: white;
 }
 
+article.plan {
+    transition: transform 0.3s, background 0.2s;
+    /*background: #ffffee;*/
+    background: white;
+    transform: scale(1.0);
+    border: 1px solid var(--bluebird);
+    box-shadow: 0 5px 5px #00000033;
+}
 
-article:hover {
+article.plan:hover {
     /*background: white;*/
     background: #ffffee;
     transform: scale(1.1);
@@ -48,7 +50,7 @@ article:hover {
 
 
 
-article:hover .buy-btn {
+article.plan:hover .buy-btn {
     animation: 1.5s infinite alternate glowing;
     /*
     box-shadow:
@@ -229,8 +231,16 @@ h3 {
 @media (max-width: 992px) {
     :host {
         font-size: 0.8rem;
-        width: 600px;
+        width: 95%;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto auto !important;
+        max-width: 90vw;
     }
+
+    .review-site-links {
+        grid-column: span 2;
+    }
+
     h3 {
         font-size: 1.0rem;
     }
@@ -242,7 +252,7 @@ h3 {
         font-size: 0.8rem;
     }
 
-    article:hover {
+    article.plan:hover {
         transform: scale(1.5);
     }
 
@@ -293,23 +303,13 @@ h3 {
 }
 
 
-@media (max-width: 776px) {
-    :host {
-        position: static !important;
-        max-width: 90vw;
-    }
-}
-
 
 @media (max-width: 576px) {
     :host {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        position: static !important;
+        display: block !important;
     }
 
-
-    article:hover {
+    article.plan:hover {
         transform: scale(1.1);
     }
     .review-site-links {

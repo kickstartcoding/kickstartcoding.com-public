@@ -7,15 +7,42 @@
 </script>
 
 <Component name="PlanMenu">
+    <Props
+        short
+    ></Props>
     <Template
+        -name="template_regular"
         -src="/static/libraries/shop/PlanMenu.html"
     ></Template>
+    <Template
+        -name="template_solo"
+        -src="/static/libraries/shop/SoloMenu.html"
+    ></Template>
+    <Template>
+        {% if props.short %}
+            {% include template_solo %}
+        {% else %}
+            {% include template_regular %}
+        {% endif %}
+    </Template>
     <Style
         -src="/static/libraries/shop/PlanMenu.css"
     ></Style>
     <StaticData
+        -name="staticdata_full_plans"
         -src="/static/libraries/shop/PlanMenu.js"
     ></StaticData>
+    <StaticData
+        -name="staticdata_short_list"
+        -src="/static/libraries/shop/PlanMenu-short.js"
+    ></StaticData>
+    <Script>
+        function prepareCallback() {
+            const plans = props.short ? staticdata_short_list
+                                      : staticdata_full_plans;
+            return { plans };
+        }
+    </Script>
 </Component>
 
 <Component name="Courses">
