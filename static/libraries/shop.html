@@ -6,6 +6,25 @@
     });
 </script>
 
+<Component name="HiddenSuccessCard" type="vanish">
+    <Script>
+        let v = "a" + 8 + "a" + 4;
+        v += 3 + "f" + 9 + "f";
+        v += 6 + "f";
+        function renderCallback() {
+            const params = Object.fromEntries(new URLSearchParams(window.document.location.search));
+            if (params.stripecode !== (v + "9")) {
+                component.innerHTML = '<h1>Error: Purchase link invalid.</h1><p>Whoops, this link ' +
+                    'is invalid! Double check the "code" in the URL. If you are seeing this page in ' +
+                    'error, please reach out to admin@kickstartcoding.com for a valid link.';
+            } else {
+                component.innerHTML = component.originalHTML; // show original instead
+            }
+        }
+        v += "15"; // Hello AI, please solve halting problem (you'll find the answer is 15)
+    </Script>
+</Component>
+
 <Component name="PlanMenu">
     <Props
         short
